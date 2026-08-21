@@ -1021,6 +1021,14 @@ body.ida-header {
     color: $secondary-hover;
 }
 
+// ====== HOME HEADER ======
+.home-header {
+  background-image: url('/assets/images/ida2027-hero.jpg') !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 // ====== GLOBAL CONTENT ALIGNMENT ======
 // Force left alignment for all content outside hero/header
 article#maincontent,

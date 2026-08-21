@@ -1,25 +1,35 @@
 ---
 layout: default
 title: "IDA 2027"
-header_type: "image"
-ida-header: true
+header_title: "IDA 2027"
+subtitle: "25th International Symposium on Intelligent Data Analysis"
+header_type: hero
+header_img: /assets/images/ida2027-hero.jpg
+project_links:
+    - url: https://github.com/XXX # url1
+      icon: fab fa-github         # Fontawesome icon code1
+      label: View on Github       # Label on button 1
+    - url: https://colab.research.google.com/XXX #url2
+      icon: fab fa-python   # Fontawesome icon code2
+      label: Open in Colab  # Label on button 2
 ---
 
 <div class="container-lg mt-4">
-    <div class="row">
-        <div class="col-lg-12 text-center mb-5">
-            <h1 style="font-size: 3rem; font-weight: 700;">IDA 2027</h1>
-            <h2 style="font-weight: 400;">25th International Symposium on Intelligent Data Analysis</h2>
-            <p class="lead mt-3">
-                <strong>April 22-24, 2027</strong> &mdash; Location TBD
-            </p>
-            <div class="mt-4">
-                <a href="{{ '/registration/' | relative_url }}" class="btn btn-primary btn-lg me-3">Register Now</a>
-                <a href="{{ '/regular-paper-track/' | relative_url }}" class="btn btn-outline-primary btn-lg">Submit a Paper</a>
+    <div class="home-header text-center mb-5">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-5">
+                <h1 style="font-size: 3rem; font-weight: 700;">IDA 2027</h1>
+                <h2 style="font-weight: 400;">25th International Symposium on Intelligent Data Analysis</h2>
+                <p class="lead mt-3">
+                    <strong>April 22-24, 2027</strong> &mdash; Location TBD
+                </p>
+                <div class="mt-4">
+                    <a href="{{ '/registration/' | relative_url }}" class="btn btn-primary btn-lg me-3">Register Now</a>
+                    <a href="{{ '/regular-paper-track/' | relative_url }}" class="btn btn-outline-primary btn-lg">Submit a Paper</a>
+                </div>
             </div>
         </div>
     </div>
-
     <div class="row mb-5">
         <div class="col-lg-12">
             <h3 class="mb-4">Key Dates</h3>
@@ -35,7 +45,6 @@ ida-header: true
             </div>
         </div>
     </div>
-
     <div class="row mb-5">
         <div class="col-lg-8 offset-lg-2">
             <h3>About IDA 2027</h3>
@@ -53,7 +62,6 @@ ida-header: true
             </p>
         </div>
     </div>
-
     {% if site.data.sponsors %}
     <div class="row mb-5">
         <div class="col-lg-12">
