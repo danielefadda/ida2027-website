@@ -1,0 +1,13 @@
+_site
+docs
+localserver
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+.idea
+.DS_Store
+*.log
+*.tmp
+*.bak
+*.swp

@@ -1,0 +1,129 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that.
+
+# Site settings
+title: "SoBigData Implementation Phase"
+subtitle: "SoBigData IP - European Research Infrastructure"
+email: info@sobigdata.eu
+description: >-
+  SoBigData Implementation Phase: establishing a pan-European research infrastructure for social data science and analytics.
+
+markdown: kramdown
+
+# Tema Remoto (Cruciale per scaricare Chulapa)
+remote_theme: "dieghernan/chulapa"
+
+# Navigazione
+navbar:
+  style: dual
+  brand:
+    title: ""
+    img: "./assets/images/Logo_SoBigData_IP_224_X_40_white.svg"
+    url: /index.html
+  nav:
+    - title: Home
+      url: /
+    - title: The Project
+      child:
+      - title: Work Packages
+        url: /work-packages/
+      - title: Team
+        url: /team/
+      - title: Consortium
+        url: /consortium/
+    - title: Downloads
+      child:
+      - title: Communication
+        url: /communication/
+      - title: Deliverables
+        url: /deliverables/
+    - title: Events
+      url: https://sobigdata.eu/events
+      target: _blank
+    - title: News
+      url: https://sobigdata.eu/blogs-masonry
+      target: _blank
+    - title: SoBigData RI
+      url: https://sobigdata.eu
+      target: _blank
+
+# Personalizzazione Aspetto
+googlefonts:
+  - url: "https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+  - url: "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+  - url: "https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap"
+
+chulapa-skin:
+  skin: "graymor"
+  vars:
+    body-color: "#07286E"
+    body-bg: "#fff"
+    footer-chulapa-bg-color: "#07286E"
+    footer-chulapa-text-color: "#fff"
+    navbar-chulapa-bg-color: "#07286E"
+    navbar-chulapa-text-color: "#fff"
+    primary: "#07286E"
+    link-color: "#9b1626"
+    link-hover-color: "#de1f36"
+    link-decoration: "underline"
+    headings-font-family: "Rajdhani"
+
+##################################################
+#    Configurazioni di sistema (NON modificare)
+##################################################
+
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+  
+collections:
+  pages:
+    output: true
+    permalink: /:path
+
+footer:
+  links:
+    - label: "Facebook"
+      icon: "fab fa-facebook"
+      url: https://www.facebook.com/SoBigData/
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: https://www.linkedin.com/company/sobigdata/
+    - label: "YouTube"
+      icon: "fab fa-youtube"
+      url: https://www.youtube.com/channel/UCRMtvc9ovcISG4EymRuczhQ
+  copyright: "2026 – SoBigData Implementation Phase"
+
+sass:
+  quiet_deps: true
+
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+exclude:
+ - .sass-cache/
+ - .jekyll-cache/
+ - gemfiles/
+ - Gemfile
+ - Gemfile.lock
+ - node_modules/
+ - vendor/bundle/
+ - vendor/cache/
+ - vendor/gems/
+ - vendor/ruby/
+ - .idea/
+
+include:
+  - .nojekyll
+
+livereload: true
+baseurl: ""
+url: ""
+pure_relative_paths: false

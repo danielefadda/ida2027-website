@@ -1,0 +1,139 @@
+---
+layout: default
+---
+
+<main class="container-lg pb-3 flex-fill">
+
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="mb-4">
+                {{ content }}
+            </div>
+
+            <style>
+                .accordion-toggle .fa-plus { display: none; }
+                .accordion-toggle .fa-minus { display: inline-block; }
+                .accordion-toggle.collapsed .fa-plus { display: inline-block; }
+                .accordion-toggle.collapsed .fa-minus { display: none; }
+            </style>
+
+            <div class="accordion" id="accordionWps">
+                {% for wp in site.data.wps %}
+                <div class="card mb-3 border-0 shadow-sm">
+                    <div class="card-header bg-white border-0 py-3" id="heading{{ forloop.index }}">
+                        <button class="btn btn-link text-left text-decoration-none p-0 w-100 d-flex justify-content-between align-items-center accordion-toggle collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ forloop.index }}" aria-expanded="false" aria-controls="collapse{{ forloop.index }}">
+                            <div class="d-flex align-items-center">
+                                <span class="badge badge-pill mr-2 d-flex align-items-center justify-content-center" style="background-color: #de1f36; color: #fff; font-size: 0.9rem; width: 60px; min-width: 60px;">{{ wp.id }}</span>
+                                <div class="d-flex align-items-center">
+                                    <span class="badge badge-pill mr-2 d-flex align-items-center justify-content-center" style="background-color: #07286E; color: #fff; font-size: 0.8rem; width: 120px;">Leader: {{ wp.leader }}</span>
+                                    <span class="badge badge-pill mr-3 d-flex align-items-center justify-content-center" style="background-color: #e9ecef; color: #495057; font-size: 0.8rem; width: 90px;">{{ wp.months }}</span>
+                                </div>
+                                <strong style="color: #07286E;">{{ wp.title }}</strong>
+                            </div>
+                            <div class="open-close-icon d-flex align-items-center ml-3">
+                                <i class="fas fa-plus" style="color: #07286E; font-size: 0.9rem;"></i>
+                                <i class="fas fa-minus" style="color: #07286E; font-size: 0.9rem;"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <div id="collapse{{ forloop.index }}" class="collapse" aria-labelledby="heading{{ forloop.index }}" data-parent="#accordionWps">
+                        <div class="card-body pt-0">
+                            <p class="mb-0" style="color: #6c757d;">{{ wp.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="mt-5 mb-4">
+                The project follows a phased approach over 36 months, with work packages covering management, infrastructure readiness, national node coordination, and governance setup. Each WP is led by a consortium partner and operates within defined milestones.
+            </div>
+
+            <div class="mt-5 mb-4">
+                <div style="overflow-x: auto;">
+                    <div style="min-width: 700px;">
+                        <div class="d-flex mb-1" style="margin-left: 40px;">
+                            {% for m in (1..36) %}
+                            {% assign mod6 = m | modulo: 6 %}
+                            {% if mod6 == 0 or m == 1 %}
+                            <div style="flex: 1; text-align: center; font-size: 0.7rem; color: #07286E;">M{{ m }}</div>
+                            {% else %}
+                            <div style="flex: 1;"></div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% for wp in site.data.wps %}
+                        {% assign month_range = wp.months | split: " - " %}
+                        {% assign start_str = month_range[0] | replace: "M", "" %}
+                        {% assign end_str = month_range[1] | replace: "M", "" %}
+                        {% assign start = start_str | plus: 0 %}
+                        {% assign end = end_str | plus: 0 %}
+                        {% assign duration = end | minus: start | plus: 1 %}
+                        {% assign left_pct = start | minus: 1 | times: 100.0 | divided_by: 36 %}
+                        {% assign width_pct = duration | times: 100.0 | divided_by: 36 %}
+                        <div class="d-flex align-items-center mb-2">
+                            <div style="width: 40px; font-size: 0.85rem; font-weight: 600; flex-shrink: 0; padding-right: 10px; text-align: right;">{{ wp.id }}</div>
+                            <div style="flex: 1; position: relative; height: 28px; background: #f0f0f0; border-radius: 4px;">
+                                <div title="{{ wp.id }}: {{ wp.title }}" style="position: absolute; left: {{ left_pct }}%; width: {{ width_pct }}%; height: 100%; background: linear-gradient(135deg, #de1f36, #de1f36); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.75rem; font-weight: 500; white-space: nowrap; min-width: 30px; cursor: default;">{{ wp.months }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="mt-5">Organisational Structure</h2>
+
+            <p>The SoBigData IP project is organised around a coordinated governance structure that ensures effective management, scientific excellence, and operational efficiency across all activities.</p>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <img src="{{ '/assets/images/IP_organisational_structure.jpeg' | relative_url }}" alt="SoBigData IP Organisational Structure" style="max-width: 100%; height: auto;">
+                <p style="font-size: 0.9rem; color: #6c757d; margin-top: 10px;"><em>SoBigData IP organisational structure showing the relationship between governance bodies, work packages, and coordination mechanisms.</em></p>
+            </div>
+
+            <h2 class="mt-5">Key Numbers of the project</h2>
+
+            {% assign wp_count = site.data.wps | size %}
+            {% assign partner_count = site.data.consortium | size %}
+            {% assign countries = site.data.consortium | map: "country" | uniq | size %}
+
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <div class="card text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Duration in<br>months</h5>
+                            <p class="display-4"><span style="color: #de1f36;">36</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Work<br>Packages</h5>
+                            <p class="display-4"><span style="color: #de1f36;">{{ wp_count }}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Number of<br>Partners</h5>
+                            <p class="display-4"><span style="color: #de1f36;">{{ partner_count }}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Number of<br>Countries</h5>
+                            <p class="display-4"><span style="color: #de1f36;">{{ countries }}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
