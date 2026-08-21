@@ -1,71 +1,69 @@
 ---
-layout: default-full
+layout: default
 ---
 
-<main class="container-lg pb-3 flex-fill">
-    {{ content }}
+{{ content }}
 
-    <ul class="nav nav-tabs" id="programmeTabs" role="tablist">
-        {% for day in site.data.program %}
-        <li class="nav-item">
-            <a class="nav-link {% if forloop.first %}active{% endif %}" 
-               id="day{{ day.day }}-tab" data-bs-toggle="tab" 
-               href="#day{{ day.day }}" role="tab">
-                {{ day.label }} &mdash; {{ day.date }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+<ul class="nav nav-tabs mb-0" id="programmeTabs" role="tablist">
+    {% for day in site.data.program %}
+    <li class="nav-item">
+        <a class="nav-link {% if forloop.first %}active{% endif %}" 
+           id="day{{ day.day }}-tab" data-toggle="tab" 
+           href="#day{{ day.day }}" role="tab">
+            {{ day.label }} &mdash; {{ day.date }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
 
-    <div class="tab-content" id="programmeTabContent">
-        {% for day in site.data.program %}
-        <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" 
-             id="day{{ day.day }}" role="tabpanel">
-            <table class="table table-striped table-hover programme-table">
-                <thead>
-                    <tr>
-                        <th style="width: 120px;">Time</th>
-                        <th style="width: 100px;">Type</th>
-                        <th>Title / Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for slot in day.sessions %}
-                    <tr class="session-{{ slot.type }}">
-                        <td><strong>{{ slot.time }}</strong></td>
-                        <td>
-                            <span class="badge badge-sm 
-                                {% if slot.type == 'keynote' %}bg-danger text-white
-                                {% elsif slot.type == 'session' %}bg-primary text-white
-                                {% elsif slot.type == 'break' %}bg-secondary text-white
-                                {% elsif slot.type == 'social' %}bg-success text-white
-                                {% elsif slot.type == 'opening' %}bg-info text-white
-                                {% elsif slot.type == 'closing' %}bg-warning text-dark
-                                {% elsif slot.type == 'registration' %}bg-light text-dark
-                                {% endif %}">
-                                {{ slot.type | capitalize }}
-                            </span>
-                        </td>
-                        <td>
-                            <strong>{{ slot.title }}</strong>
-                            {% if slot.speaker %}<br><em class="text-muted">{{ slot.speaker }}</em>{% endif %}
-                            {% if slot.talk_title %}<br>{{ slot.talk_title }}{% endif %}
-                            {% if slot.talks %}
-                            <ul class="mb-0 mt-1">
-                                {% for talk in slot.talks %}
-                                <li>{{ talk.title }} <span class="text-muted">&mdash; {{ talk.authors }}</span></li>
-                                {% endfor %}
-                            </ul>
-                            {% endif %}
-                            {% if slot.venue %}<br><small class="text-muted">{{ slot.venue }}</small>{% endif %}
-                            {% if slot.description %}<br><small>{{ slot.description }}</small>{% endif %}
-                            {% if slot.bus_info %}<br><small class="text-info">{{ slot.bus_info }}</small>{% endif %}
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-        {% endfor %}
+<div class="tab-content" id="programmeTabContent">
+    {% for day in site.data.program %}
+    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" 
+         id="day{{ day.day }}" role="tabpanel">
+        <table class="table table-striped table-hover programme-table">
+            <thead>
+                <tr>
+                    <th style="width: 120px;">Time</th>
+                    <th style="width: 100px;">Type</th>
+                    <th>Title / Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for slot in day.sessions %}
+                <tr class="session-{{ slot.type }}">
+                    <td><strong>{{ slot.time }}</strong></td>
+                    <td>
+                        <span class="badge badge-sm 
+                            {% if slot.type == 'keynote' %}bg-danger text-white
+                            {% elsif slot.type == 'session' %}bg-primary text-white
+                            {% elsif slot.type == 'break' %}bg-secondary text-white
+                            {% elsif slot.type == 'social' %}bg-success text-white
+                            {% elsif slot.type == 'opening' %}bg-info text-white
+                            {% elsif slot.type == 'closing' %}bg-warning text-dark
+                            {% elsif slot.type == 'registration' %}bg-light text-dark
+                            {% endif %}">
+                            {{ slot.type | capitalize }}
+                        </span>
+                    </td>
+                    <td>
+                        <strong>{{ slot.title }}</strong>
+                        {% if slot.speaker %}<br><em class="text-muted">{{ slot.speaker }}</em>{% endif %}
+                        {% if slot.talk_title %}<br>{{ slot.talk_title }}{% endif %}
+                        {% if slot.talks %}
+                        <ul class="mb-0 mt-1">
+                            {% for talk in slot.talks %}
+                            <li>{{ talk.title }} <span class="text-muted">&mdash; {{ talk.authors }}</span></li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        {% if slot.venue %}<br><small class="text-muted">{{ slot.venue }}</small>{% endif %}
+                        {% if slot.description %}<br><small>{{ slot.description }}</small>{% endif %}
+                        {% if slot.bus_info %}<br><small class="text-info">{{ slot.bus_info }}</small>{% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
-</main>
+    {% endfor %}
+</div>
