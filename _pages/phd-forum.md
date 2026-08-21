@@ -2,6 +2,7 @@
 layout: default
 title: "PhD Forum"
 header_type: "ida"
+header_title: "IDA 2027 PhD Forum"
 ida-header: true
 show_toc: true
 ---

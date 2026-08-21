@@ -2,7 +2,9 @@
 layout: committee
 title: "Chairs"
 header_type: "ida"
+header_title: "IDA 2027 Chairs"
 ida-header: true
+
 ---
 
 ## Organizing Committee

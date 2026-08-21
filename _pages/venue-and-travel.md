@@ -2,6 +2,7 @@
 layout: default
 title: "Venue and Travel"
 header_type: "ida"
+header_title: "IDA 2027 Venue and Travel"
 ida-header: true
 show_toc: true
 ---

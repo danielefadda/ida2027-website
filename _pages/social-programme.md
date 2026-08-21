@@ -2,6 +2,7 @@
 layout: default-full
 title: "Social Programme"
 header_type: "ida"
+header_title: "IDA 2027 Social Programme"
 ida-header: true
 ---
 

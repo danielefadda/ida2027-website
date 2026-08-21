@@ -2,6 +2,7 @@
 layout: papers
 title: "Accepted Papers"
 header_type: "ida"
+header_title: "IDA 2027 Accepted Papers"
 ida-header: true
 ---
 
