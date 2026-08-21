@@ -126,9 +126,9 @@
 
 // ====== DESIGN SYSTEM - COLOR PALETTE ======
 // Colori principali dal config.yml (chulapa-skin)
-$primary-color: #07286E;      // Blu scuro primario (corpo, navbar, footer)
-$secondary-color: #9b1626;    // Rosso scuro (link)
-$secondary-hover: #de1f36;    // Rosso più chiaro (link hover)
+$primary-color: #000;      // Blu scuro primario (corpo, navbar, footer)
+$secondary-color: #e87722;    // Arancione (link)
+$secondary-hover: #f08d3a;    // Arancione più chiaro (link hover)
 $light-gray: #f8f9fa;
 $dark-gray: #333;
 $border-gray: #dee2e6;
@@ -368,7 +368,7 @@ $shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.15);
 
 .partner-badge-research {
   background-color: #E8F5E9;
-  color: #de1f36;
+  color: var(--secondary-color);
 }
 
 .partner-badge-gold {
@@ -385,7 +385,7 @@ $shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.15);
 
 .partner-badge-coordinator {
   background-color: #E8F5E9;
-  color: #de1f36;
+  color: var(--secondary-color);
   font-weight: 700;
 }
 
@@ -420,7 +420,7 @@ $shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .partner-item.partner-coordinator {
-  border-top-color: #de1f36;
+  border-top-color: var(--secondary-color);
 }
 
 .partner-item.partner-beneficiary {
@@ -948,7 +948,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // Navbar fix
 .navbar-chulapa .dropdown-menu .dropdown-item:hover, .navbar-chulapa .dropdown-menu .dropdown-item:focus {
-    color: #de1f36;
+    color: $secondary-hover;
 }
 .navbar-brand {
     text-transform: none !important;
@@ -983,70 +983,30 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// SBD Header customization
-body.sbd-header {
+// IDA Header customization
+body.ida-header {
   .hero-chulapa-image {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
   }
 
   .hero-chulapa,
   .splash-chulapa,
-  .splash-chulapa-image,
-  .hero-chulapa-image {
+  .splash-chulapa-image {
     font-family: Rajdhani, sans-serif;
     background-color: transparent;
-    text-align: center;
     min-height: 10vh;
   }
 }
 
-// SBD Header type
-.sbd-header,
-.sbd-header-image {
+// IDA Header type
+.ida-header-image {
   font-family: Rajdhani, sans-serif;
   background-color: transparent;
   text-align: center;
   min-height: 10vh;
-}
-
-.sbd-header-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-// SBD Header customization
-body.unipi-header {
-  .hero-chulapa-image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .hero-chulapa,
-  .splash-chulapa,
-  .splash-chulapa-image,
-  .hero-chulapa-image {
-    font-family: Rajdhani, sans-serif;
-    background-color: transparent;
-    text-align: center;
-    min-height: 30vh;
-  }
-}
-
-// SBD Header type
-.unipi-header,
-.unipi-header-image {
-  font-family: Rajdhani, sans-serif;
-  background-color: transparent;
-  text-align: center;
-  min-height: 30vh;
-}
-
-.unipi-header-image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1054,9 +1014,87 @@ body.unipi-header {
 
 
 .nav-item:last-child {
-    background-color: #de1f36;
+    background-color: $secondary-color;
     border-radius: 0;
     padding-inline-start: 0.4em;
     padding-inline-end: 0.4em;
-    color: #de1f36;
+    color: $secondary-hover;
+}
+
+// ====== GLOBAL CONTENT ALIGNMENT ======
+// Force left alignment for all content outside hero/header
+article#maincontent,
+.e-content,
+.card-body,
+.list-group-item {
+  text-align: left !important;
+}
+
+// ====== PROGRAMME TABLE STYLES ======
+.programme-table {
+  margin-top: 1rem;
+
+  .session-keynote {
+    background-color: rgba(220, 53, 69, 0.08);
+  }
+
+  .session-session {
+    background-color: rgba(7, 40, 110, 0.05);
+  }
+
+  .session-social {
+    background-color: rgba(25, 135, 84, 0.08);
+  }
+
+  .session-break {
+    background-color: rgba(108, 117, 125, 0.05);
+  }
+
+  .session-opening,
+  .session-closing {
+    background-color: rgba(255, 193, 7, 0.08);
+  }
+}
+
+// ====== REGISTRATION TABLE STYLES ======
+.registration-table {
+  th {
+    background-color: $primary-color;
+    color: $white;
+  }
+
+  td {
+    vertical-align: middle;
+  }
+}
+
+// ====== SPEAKERS GRID ======
+.speakers-section {
+  .direttivi-grid {
+    gap: 30px;
+  }
+}
+
+// ====== FAQ STYLES ======
+details {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: $light-gray;
+  border-radius: 8px;
+  border: 1px solid $border-gray;
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: $primary-color;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  p {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+  }
 }

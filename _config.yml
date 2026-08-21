@@ -1,55 +1,57 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that.
+# IDA 2027 — 25th International Symposium on Intelligent Data Analysis
 
-# Site settings
-title: "SoBigData Implementation Phase"
-subtitle: "SoBigData IP - European Research Infrastructure"
-email: info@sobigdata.eu
+title: "IDA 2027"
+subtitle: "25th International Symposium on Intelligent Data Analysis"
+email: "ida2027@conference.org"
 description: >-
-  SoBigData Implementation Phase: establishing a pan-European research infrastructure for social data science and analytics.
+  IDA 2027: 25th International Symposium on Intelligent Data Analysis.
+  Advancing Intelligent Data Analysis with novel, potentially game-changing ideas.
 
 markdown: kramdown
 
-# Tema Remoto (Cruciale per scaricare Chulapa)
 remote_theme: "dieghernan/chulapa"
 
-# Navigazione
 navbar:
   style: dual
   brand:
     title: ""
-    img: "./assets/images/Logo_SoBigData_IP_224_X_40_white.svg"
-    url: /index.html
+    img: "./assets/images/ida2027-logo-white.svg"
+    url: /
   nav:
     - title: Home
       url: /
-    - title: The Project
+    - title: Submissions
       child:
-      - title: Work Packages
-        url: /work-packages/
-      - title: Team
-        url: /team/
-      - title: Consortium
-        url: /consortium/
-    - title: Downloads
+        - title: Why Submit to IDA?
+          url: /why-submit/
+        - title: Regular Paper Track
+          url: /regular-paper-track/
+        - title: PhD Forum
+          url: /phd-forum/
+    - title: Programme
       child:
-      - title: Communication
-        url: /communication/
-      - title: Deliverables
-        url: /deliverables/
-    - title: Events
-      url: https://sobigdata.eu/events
-      target: _blank
-    - title: News
-      url: https://sobigdata.eu/blogs-masonry
-      target: _blank
-    - title: SoBigData RI
-      url: https://sobigdata.eu
+        - title: Programme Overview
+          url: /programme-overview/
+        - title: Accepted Papers
+          url: /accepted-papers/
+        - title: Invited Speakers
+          url: /invited-speakers/
+        - title: Social Programme
+          url: /social-programme/
+    - title: Organization
+      child:
+        - title: Chairs
+          url: /chairs/
+    - title: Attending
+      child:
+        - title: Venue & Travel
+          url: /venue-and-travel/
+        - title: Registration
+          url: /registration/
+    - title: Submission System
+      url: https://cmt3.research.microsoft.com/IDA2027/
       target: _blank
 
-# Personalizzazione Aspetto
 googlefonts:
   - url: "https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
   - url: "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
@@ -58,20 +60,20 @@ googlefonts:
 chulapa-skin:
   skin: "graymor"
   vars:
-    body-color: "#07286E"
+    body-color: "#000"
     body-bg: "#fff"
-    footer-chulapa-bg-color: "#07286E"
+    footer-chulapa-bg-color: "#000"
     footer-chulapa-text-color: "#fff"
-    navbar-chulapa-bg-color: "#07286E"
+    navbar-chulapa-bg-color: "#000"
     navbar-chulapa-text-color: "#fff"
-    primary: "#07286E"
-    link-color: "#9b1626"
-    link-hover-color: "#de1f36"
+    primary: "#000"
+    link-color: "#e87722"
+    link-hover-color: "#e87722"
     link-decoration: "underline"
-    headings-font-family: "Rajdhani"
+    headings-font-family: "open sans, sans-serif"
 
 ##################################################
-#    Configurazioni di sistema (NON modificare)
+#    System Configuration (DO NOT MODIFY)
 ##################################################
 
 plugins:
@@ -83,7 +85,7 @@ plugins:
 relative_links:
   enabled: true
   collections: true
-  
+
 collections:
   pages:
     output: true
@@ -91,22 +93,20 @@ collections:
 
 footer:
   links:
-    - label: "Facebook"
-      icon: "fab fa-facebook"
-      url: https://www.facebook.com/SoBigData/
+    - label: "Bluesky"
+      icon: "fab fa-bluesky"
+      url: "https://bsky.app/profile/ida-symposia.bsky.social"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
-      url: https://www.linkedin.com/company/sobigdata/
-    - label: "YouTube"
-      icon: "fab fa-youtube"
-      url: https://www.youtube.com/channel/UCRMtvc9ovcISG4EymRuczhQ
-  copyright: "2026 – SoBigData Implementation Phase"
+      url: "https://www.linkedin.com/groups/13391032/"
+    - label: "Facebook"
+      icon: "fab fa-facebook"
+      url: "https://www.facebook.com/IDAsymposia/"
+  copyright: "2027 - Symposium on Intelligent Data Analysis (IDA 2027)"
 
 sass:
   quiet_deps: true
 
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
 exclude:
  - .sass-cache/
  - .jekyll-cache/

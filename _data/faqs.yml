@@ -1,0 +1,17 @@
+- question: "Is the review process single-blind or double-blind?"
+  answer: "Single-blind review process. Reviewers are aware of the authors' identities, but authors do not know the reviewers."
+
+- question: "What is the page limit for regular papers?"
+  answer: "10-12 pages including figures, title pages, references, and appendices. Format: LNCS (Springer Lecture Notes in Computer Science)."
+
+- question: "Can I submit to both the regular track and the PhD Forum?"
+  answer: "PhD students should submit full papers to the regular track if they want to be considered for the main conference. The PhD Forum is specifically for 2-page poster abstracts."
+
+- question: "Is it allowed to post papers on arXiv?"
+  answer: "Yes, posting on arXiv is allowed. The conference follows a single-blind review process, so pre-print posting does not violate submission policies."
+
+- question: "What is the policy on generative AI / LLMs?"
+  answer: "Use of LLMs for editing and polishing is permitted, but must be disclosed in the methods section. LLMs cannot be listed as co-authors."
+
+- question: "Can I present online if I cannot attend in person?"
+  answer: "In-person attendance is strongly encouraged. Online presentation may be considered in exceptional circumstances (e.g., visa issues). Contact the organizers for assistance."

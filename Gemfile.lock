@@ -282,6 +282,7 @@ DEPENDENCIES
   jekyll-include-cache (~> 0.2.1)
   jekyll-remote-theme (~> 0.4.3)
   jekyll-seo-tag (~> 2.8.0)
+  jekyll-sitemap
   kramdown (~> 2.4.0)
   kramdown-parser-gfm (~> 1.1.0)
   nokogiri (~> 1.16.8)

@@ -1,0 +1,24 @@
+- title: "Paper Title Placeholder 1"
+  authors: "Author A, Author B"
+  type: "regular"
+  id: "1"
+
+- title: "Paper Title Placeholder 2"
+  authors: "Author C, Author D"
+  type: "regular"
+  id: "2"
+
+- title: "Paper Title Placeholder 3"
+  authors: "Author E, Author F"
+  type: "regular"
+  id: "3"
+
+- title: "PhD Forum Poster 1"
+  authors: "Student A, Advisor B"
+  type: "phd"
+  id: "P1"
+
+- title: "PhD Forum Poster 2"
+  authors: "Student C, Advisor D"
+  type: "phd"
+  id: "P2"

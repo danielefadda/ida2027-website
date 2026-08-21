@@ -1,0 +1,77 @@
+---
+layout: default-full
+---
+
+<main class="container-lg pb-3 flex-fill">
+    {{ content }}
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <input type="text" id="paperSearch" class="form-control" 
+                   placeholder="Search papers by title or author...">
+        </div>
+        <div class="col-md-6">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-outline-primary filter-btn active" data-filter="all">
+                    All ({{ site.data.papers | size }})
+                </button>
+                <button type="button" class="btn btn-outline-primary filter-btn" data-filter="regular">
+                    Regular ({{ site.data.papers | where: "type", "regular" | size }})
+                </button>
+                <button type="button" class="btn btn-outline-primary filter-btn" data-filter="phd">
+                    PhD Forum ({{ site.data.papers | where: "type", "phd" | size }})
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-striped table-hover" id="papersTable">
+        <thead>
+            <tr>
+                <th style="width: 50px;">#</th>
+                <th>Title</th>
+                <th>Authors</th>
+                <th style="width: 100px;">Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for paper in site.data.papers %}
+            <tr data-type="{{ paper.type }}">
+                <td>{{ paper.id }}</td>
+                <td>{{ paper.title }}</td>
+                <td>{{ paper.authors }}</td>
+                <td>
+                    <span class="badge badge-sm {% if paper.type == 'phd' %}bg-info text-white{% else %}bg-primary text-white{% endif %}">
+                        {{ paper.type | capitalize }}
+                    </span>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</main>
+
+<script>
+document.getElementById('paperSearch').addEventListener('input', function() {
+    const filter = this.value.toLowerCase();
+    document.querySelectorAll('#papersTable tbody tr').forEach(function(row) {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(filter) ? '' : 'none';
+    });
+});
+
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('#papersTable tbody tr').forEach(function(row) {
+            if (filter === 'all') {
+                row.style.display = '';
+            } else {
+                row.style.display = row.dataset.type === filter ? '' : 'none';
+            }
+        });
+    });
+});
+</script>

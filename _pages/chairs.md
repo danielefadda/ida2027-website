@@ -1,0 +1,10 @@
+---
+layout: committee
+title: "Chairs"
+header_type: "ida"
+ida-header: true
+---
+
+## Organizing Committee
+
+The IDA 2027 Organizing Committee brings together experts in intelligent data analysis from around the world.

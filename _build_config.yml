@@ -4,6 +4,7 @@ destination: "localserver"
 theme: chulapa-jekyll
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
   - jekyll-include-cache
   - jekyll-relative-links
 relative_links:

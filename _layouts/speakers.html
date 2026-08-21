@@ -1,0 +1,62 @@
+---
+layout: default-full
+---
+
+<main class="container-lg pb-3 flex-fill">
+    {{ content }}
+
+    <div class="direttivi-grid">
+        {% for speaker in site.data.speakers %}
+        <div class="docente-card" data-toggle="modal" data-target="#speaker-modal-{{ forloop.index }}" style="cursor: pointer;">
+            {% if speaker.photo != "" %}
+            <div class="docente-image">
+                <img src="{{ speaker.photo | relative_url }}" alt="{{ speaker.name }}">
+            </div>
+            {% else %}
+            <div class="docente-image">
+                <div style="width: 100%; height: 250px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-user" style="font-size: 3rem; color: #adb5bd;"></i>
+                </div>
+            </div>
+            {% endif %}
+            <div class="docente-info">
+                <h3 class="docente-name">{{ speaker.name }}</h3>
+                <p class="docente-institution">{{ speaker.affiliation }}</p>
+                <p class="docente-role">{{ speaker.talk_title }}</p>
+            </div>
+        </div>
+
+        <div class="modal fade" id="speaker-modal-{{ forloop.index }}" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{ speaker.name }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex align-items-start mb-3">
+                            {% if speaker.photo != "" %}
+                            <img src="{{ speaker.photo | relative_url }}" alt="{{ speaker.name }}" class="team-modal-photo">
+                            {% else %}
+                            <div style="width: 80px; height: 80px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                <i class="fas fa-user" style="font-size: 2rem; color: #adb5bd;"></i>
+                            </div>
+                            {% endif %}
+                            <div>
+                                <p class="docente-institution mb-1">{{ speaker.affiliation }}</p>
+                                {% if speaker.website %}
+                                <p><a href="{{ speaker.website }}" target="_blank">Website</a></p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <h5><strong>Talk:</strong> {{ speaker.talk_title }}</h5>
+                        {% if speaker.talk_abstract %}
+                        <p class="mt-3">{{ speaker.talk_abstract }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
