@@ -15,327 +15,53 @@ layout: default-full
                 {{ content }}
             </div>
 
-            {% if site.data.committee.general_chair %}
-            <section class="committee-section mb-5">
-                <h2>General Chair</h2>
-                <div class="direttivi-grid">
-                    {% for member in site.data.committee.general_chair %}
-                    <div class="docente-card" data-toggle="modal" data-target="#gc-modal-{{ forloop.index }}" style="cursor: pointer;">
-                        {% if member.photo != "" %}
-                        <div class="docente-image">
-                            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
-                        </div>
-                        {% else %}
-                        <div class="docente-image">
-                            <div style="width: 100%; height: 250px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-user" style="font-size: 3rem; color: #adb5bd;"></i>
-                            </div>
-                        </div>
-                        {% endif %}
-                        <div class="docente-info">
-                            <h3 class="docente-name">{{ member.name }}</h3>
-                            <p class="docente-institution">{{ member.affiliation }}</p>
+            <div class="direttivi-grid">
+                {% for member in site.data.committee %}
+                <div class="docente-card" data-toggle="modal" data-target="#member-modal-{{ forloop.index }}" style="cursor: pointer;">
+                    {% if member.photo != "" %}
+                    <div class="docente-image">
+                        <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
+                    </div>
+                    {% else %}
+                    <div class="docente-image">
+                        <div style="width: 100%; height: 250px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user" style="font-size: 3rem; color: #adb5bd;"></i>
                         </div>
                     </div>
-
-                    <div class="modal fade" id="gc-modal-{{ forloop.index }}" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">{{ member.name }}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body d-flex align-items-start">
-                                    {% if member.photo != "" %}
-                                    <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="team-modal-photo">
-                                    {% else %}
-                                    <div style="width: 80px; height: 80px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                        <i class="fas fa-user" style="font-size: 2rem; color: #adb5bd;"></i>
-                                    </div>
-                                    {% endif %}
-                                    <div>
-                                        <p class="docente-institution mb-2">{{ member.affiliation }}</p>
-                                        <p class="docente-bio">{{ member.bio }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    {% endif %}
+                    <div class="docente-info">
+                                    <p class="member-role">{{ member.role }}</p>
+                        <h3 class="docente-name">{{ member.name }}</h3>
+                        <p class="docente-institution">{{ member.affiliation }}</p>
                     </div>
-                    {% endfor %}
                 </div>
-            </section>
-            {% endif %}
 
-            {% if site.data.committee.programme_chairs %}
-            <section class="committee-section mb-5">
-                <h2>Programme Chairs</h2>
-                <div class="direttivi-grid">
-                    {% for member in site.data.committee.programme_chairs %}
-                    <div class="docente-card" data-toggle="modal" data-target="#pc-modal-{{ forloop.index }}" style="cursor: pointer;">
-                        {% if member.photo != "" %}
-                        <div class="docente-image">
-                            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
-                        </div>
-                        {% else %}
-                        <div class="docente-image">
-                            <div style="width: 100%; height: 250px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-user" style="font-size: 3rem; color: #adb5bd;"></i>
+                <div class="modal fade" id="member-modal-{{ forloop.index }}" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">{{ member.name }}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             </div>
-                        </div>
-                        {% endif %}
-                        <div class="docente-info">
-                            <h3 class="docente-name">{{ member.name }}</h3>
-                            <p class="docente-institution">{{ member.affiliation }}</p>
-                        </div>
-                    </div>
-
-                    <div class="modal fade" id="pc-modal-{{ forloop.index }}" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">{{ member.name }}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <div class="modal-body d-flex align-items-start">
+                                {% if member.photo != "" %}
+                                <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="team-modal-photo">
+                                {% else %}
+                                <div style="width: 80px; height: 80px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                    <i class="fas fa-user" style="font-size: 2rem; color: #adb5bd;"></i>
                                 </div>
-                                <div class="modal-body d-flex align-items-start">
-                                    {% if member.photo != "" %}
-                                    <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="team-modal-photo">
-                                    {% else %}
-                                    <div style="width: 80px; height: 80px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                        <i class="fas fa-user" style="font-size: 2rem; color: #adb5bd;"></i>
-                                    </div>
-                                    {% endif %}
-                                    <div>
-                                        <p class="docente-institution mb-2">{{ member.affiliation }}</p>
-                                        <p class="docente-bio">{{ member.bio }}</p>
-                                    </div>
+                                {% endif %}
+                                <div>
+                        <p class="member-role">{{ member.role }}</p>
+                                    <p class="docente-institution mb-2">{{ member.affiliation }}</p>
+                                    <p class="docente-bio">{{ member.bio }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
-            </section>
-            {% endif %}
-
-            {% if site.data.committee.advisory_chairs %}
-            <section class="committee-section mb-5">
-                <h2>Advisory Board</h2>
-                <div class="direttivi-grid">
-                    {% for member in site.data.committee.advisory_chairs %}
-                    <div class="docente-card" data-toggle="modal" data-target="#advisory-modal-{{ forloop.index }}" style="cursor: pointer;">
-                        {% if member.photo != "" %}
-                        <div class="docente-image">
-                            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
-                        </div>
-                        {% else %}
-                        <div class="docente-image">
-                            <div style="width: 100%; height: 250px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-user" style="font-size: 3rem; color: #adb5bd;"></i>
-                            </div>
-                        </div>
-                        {% endif %}
-                        <div class="docente-info">
-                            <h3 class="docente-name">{{ member.name }}</h3>
-                            <p class="docente-institution">{{ member.affiliation }}</p>
-                        </div>
-                    </div>
-
-                    <div class="modal fade" id="advisory-modal-{{ forloop.index }}" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">{{ member.name }}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body d-flex align-items-start">
-                                    {% if member.photo != "" %}
-                                    <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="team-modal-photo">
-                                    {% else %}
-                                    <div style="width: 80px; height: 80px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                        <i class="fas fa-user" style="font-size: 2rem; color: #adb5bd;"></i>
-                                    </div>
-                                    {% endif %}
-                                    <div>
-                                        <p class="docente-institution mb-2">{{ member.affiliation }}</p>
-                                        <p class="docente-bio">{{ member.bio }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
-            {% endif %}
-
-            {% if site.data.committee.phd_forum_chair %}
-            <section class="committee-section mb-5">
-                <h2>PhD Forum Chair</h2>
-                <div class="direttivi-grid">
-                    {% for member in site.data.committee.phd_forum_chair %}
-                    <div class="docente-card" data-toggle="modal" data-target="#phd-modal-{{ forloop.index }}" style="cursor: pointer;">
-                        {% if member.photo != "" %}
-                        <div class="docente-image">
-                            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
-                        </div>
-                        {% else %}
-                        <div class="docente-image">
-                            <div style="width: 100%; height: 250px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-user" style="font-size: 3rem; color: #adb5bd;"></i>
-                            </div>
-                        </div>
-                        {% endif %}
-                        <div class="docente-info">
-                            <h3 class="docente-name">{{ member.name }}</h3>
-                            <p class="docente-institution">{{ member.affiliation }}</p>
-                        </div>
-                    </div>
-
-                    <div class="modal fade" id="phd-modal-{{ forloop.index }}" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">{{ member.name }}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body d-flex align-items-start">
-                                    {% if member.photo != "" %}
-                                    <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="team-modal-photo">
-                                    {% else %}
-                                    <div style="width: 80px; height: 80px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                        <i class="fas fa-user" style="font-size: 2rem; color: #adb5bd;"></i>
-                                    </div>
-                                    {% endif %}
-                                    <div>
-                                        <p class="docente-institution mb-2">{{ member.affiliation }}</p>
-                                        <p class="docente-bio">{{ member.bio }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
-            {% endif %}
-
-            {% if site.data.committee.local_chair %}
-            <section class="committee-section mb-5">
-                <h2>Local Chair</h2>
-                <div class="direttivi-grid">
-                    {% for member in site.data.committee.local_chair %}
-                    <div class="docente-card" data-toggle="modal" data-target="#local-modal-{{ forloop.index }}" style="cursor: pointer;">
-                        {% if member.photo != "" %}
-                        <div class="docente-image">
-                            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
-                        </div>
-                        {% else %}
-                        <div class="docente-image">
-                            <div style="width: 100%; height: 250px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-user" style="font-size: 3rem; color: #adb5bd;"></i>
-                            </div>
-                        </div>
-                        {% endif %}
-                        <div class="docente-info">
-                            <h3 class="docente-name">{{ member.name }}</h3>
-                            <p class="docente-institution">{{ member.affiliation }}</p>
-                        </div>
-                    </div>
-
-                    <div class="modal fade" id="local-modal-{{ forloop.index }}" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">{{ member.name }}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body d-flex align-items-start">
-                                    {% if member.photo != "" %}
-                                    <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="team-modal-photo">
-                                    {% else %}
-                                    <div style="width: 80px; height: 80px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                        <i class="fas fa-user" style="font-size: 2rem; color: #adb5bd;"></i>
-                                    </div>
-                                    {% endif %}
-                                    <div>
-                                        <p class="docente-institution mb-2">{{ member.affiliation }}</p>
-                                        <p class="docente-bio">{{ member.bio }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
-            {% endif %}
-
-            {% if site.data.committee.proceedings_chairs %}
-            <section class="committee-section mb-5">
-                <h2>Proceedings Chairs</h2>
-                <div class="direttivi-grid">
-                    {% for member in site.data.committee.proceedings_chairs %}
-                    <div class="docente-card" data-toggle="modal" data-target="#proc-modal-{{ forloop.index }}" style="cursor: pointer;">
-                        {% if member.photo != "" %}
-                        <div class="docente-image">
-                            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
-                        </div>
-                        {% else %}
-                        <div class="docente-image">
-                            <div style="width: 100%; height: 250px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-user" style="font-size: 3rem; color: #adb5bd;"></i>
-                            </div>
-                        </div>
-                        {% endif %}
-                        <div class="docente-info">
-                            <h3 class="docente-name">{{ member.name }}</h3>
-                            <p class="docente-institution">{{ member.affiliation }}</p>
-                        </div>
-                    </div>
-
-                    <div class="modal fade" id="proc-modal-{{ forloop.index }}" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">{{ member.name }}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body d-flex align-items-start">
-                                    {% if member.photo != "" %}
-                                    <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="team-modal-photo">
-                                    {% else %}
-                                    <div style="width: 80px; height: 80px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                        <i class="fas fa-user" style="font-size: 2rem; color: #adb5bd;"></i>
-                                    </div>
-                                    {% endif %}
-                                    <div>
-                                        <p class="docente-institution mb-2">{{ member.affiliation }}</p>
-                                        <p class="docente-bio">{{ member.bio }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
-            {% endif %}
-
-            {% if site.data.committee.publicity_team %}
-            <section class="committee-section mb-5">
-                <h2>Online and Publicity Team</h2>
-                <div class="direttivi-grid">
-                    {% for member in site.data.committee.publicity_team %}
-                    <div class="docente-card">
-                        <div class="docente-info">
-                            <h3 class="docente-name">{{ member.name }}</h3>
-                            <p class="docente-institution">{{ member.affiliation }}</p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
-            {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 </main>
