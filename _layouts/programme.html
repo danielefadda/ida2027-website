@@ -20,50 +20,60 @@ layout: default
     {% for day in site.data.program %}
     <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" 
          id="day{{ day.day }}" role="tabpanel">
-        <table class="table table-striped table-hover programme-table">
-            <thead>
-                <tr>
-                    <th style="width: 120px;">Time</th>
-                    <th style="width: 100px;">Type</th>
-                    <th>Title / Details</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for slot in day.sessions %}
-                <tr class="session-{{ slot.type }}">
-                    <td><strong>{{ slot.time }}</strong></td>
-                    <td>
-                        <span class="badge badge-sm 
-                            {% if slot.type == 'keynote' %}bg-danger text-white
-                            {% elsif slot.type == 'session' %}bg-primary text-white
-                            {% elsif slot.type == 'break' %}bg-secondary text-white
-                            {% elsif slot.type == 'social' %}bg-success text-white
-                            {% elsif slot.type == 'opening' %}bg-info text-white
-                            {% elsif slot.type == 'closing' %}bg-warning text-dark
-                            {% elsif slot.type == 'registration' %}bg-light text-dark
-                            {% endif %}">
-                            {{ slot.type | capitalize }}
-                        </span>
-                    </td>
-                    <td>
-                        <strong>{{ slot.title }}</strong>
-                        {% if slot.speaker %}<br><em class="text-muted">{{ slot.speaker }}</em>{% endif %}
-                        {% if slot.talk_title %}<br>{{ slot.talk_title }}{% endif %}
-                        {% if slot.talks %}
-                        <ul class="mb-0 mt-1">
-                            {% for talk in slot.talks %}
-                            <li>{{ talk.title }} <span class="text-muted">&mdash; {{ talk.authors }}</span></li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                        {% if slot.venue %}<br><small class="text-muted">{{ slot.venue }}</small>{% endif %}
-                        {% if slot.description %}<br><small>{{ slot.description }}</small>{% endif %}
-                        {% if slot.bus_info %}<br><small class="text-info">{{ slot.bus_info }}</small>{% endif %}
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        
+        <!-- Aggiunto wrapper per lo scroll orizzontale su mobile -->
+        <div class="table-responsive">
+            <table class="table w-100 table-striped table-hover programme-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Time</th>
+                        <th style="width: 15%;">Type</th>
+                        <th style="width: 60%;">Title / Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for slot in day.sessions %}
+                    <tr class="session-{{ slot.type }}">
+                        <td><strong>{{ slot.time }}</strong></td>
+                        <td>
+                            <!-- Classi badge corrette per Bootstrap 4.5 (badge-*) -->
+                            <!-- Rimossi i text-white ridondanti (BS4 li gestisce nativamente) -->
+                            <span class="badge badge-sm 
+                                {% if slot.type == 'keynote' %}bg-danger text-white
+                                {% elsif slot.type == 'session' %}bg-primary text-white
+                                {% elsif slot.type == 'break' %}bg-secondary text-white
+                                {% elsif slot.type == 'social' %}bg-success text-white
+                                {% elsif slot.type == 'opening' %}bg-info text-white
+                                {% elsif slot.type == 'closing' %}bg-warning text-dark
+                                {% elsif slot.type == 'registration' %}bg-light text-dark
+                                {% endif %}">
+                                {{ slot.type | capitalize }}
+                            </span>
+                        </td>
+                        <td>
+                            <strong>{{ slot.title }}</strong>
+                            {% if slot.speaker %}<br><em class="text-muted">{{ slot.speaker }}</em>{% endif %}
+                            {% if slot.talk_title %}<br>{{ slot.talk_title }}{% endif %}
+                            
+                            {% if slot.talks %}
+                            <!-- Aggiunto pl-3 per allineare correttamente i bullet point -->
+                            <ul class="mb-0 mt-1 pl-3">
+                                {% for talk in slot.talks %}
+                                <li>{{ talk.title }} <span class="text-muted">&mdash; {{ talk.authors }}</span></li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            
+                            {% if slot.venue %}<br><small class="text-muted">{{ slot.venue }}</small>{% endif %}
+                            {% if slot.description %}<br><small>{{ slot.description }}</small>{% endif %}
+                            {% if slot.bus_info %}<br><small class="text-info">{{ slot.bus_info }}</small>{% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
     </div>
     {% endfor %}
 </div>

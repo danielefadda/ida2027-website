@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-full
 title: "IDA 2027"
 header_title: "IDA 2027"
 subtitle: "25th International Symposium on Intelligent Data Analysis"
@@ -30,7 +30,7 @@ project_links:
             </div>
         </div>
     </div>
-    <div class="row mb-5">
+    <!-- <div class="row mb-5">
         <div class="col-lg-12">
             <h3 class="mb-4">Key Dates</h3>
             <div class="badge-container">
@@ -44,10 +44,10 @@ project_links:
                 {% endfor %}
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="row mb-5">
-        <div class="col-lg-8 offset-lg-2">
-            <h3>About IDA 2027</h3>
+        <div class="col-6">
+            <h3>Symposium on Intelligent Data Analysis 2027</h3>
             <p>
                 Advancing <em>Intelligent Data Analysis</em> requires novel, potentially game-changing ideas. 
                 IDA's mission is to promote ideas over performance: a solid motivation can be as convincing as 
@@ -60,6 +60,42 @@ project_links:
                 and practitioners from academia, industry, and government to present and discuss the latest 
                 research in intelligent data analysis.
             </p>
+        </div>
+        <div class="col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Key Date</th>
+                        <th>Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ site.data.dates.abstract_deadline.display }}</td>
+                        <td>Abstract Deadline</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.dates.submission_deadline.display }}</td>
+                        <td>Submission Deadline</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.dates.decision_notification.display }}</td>
+                        <td>Decision Notification</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.dates.camera_ready_deadline.display }}</td>
+                        <td>Camera-Ready Deadline</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.dates.early_registration_deadline.display }}</td>
+                        <td>Early Registration Deadline</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.dates.symposium_date.display }}</td>
+                        <td>Symposium</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     {% if site.data.sponsors %}
