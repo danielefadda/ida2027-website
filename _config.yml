@@ -53,7 +53,7 @@ navbar:
       target: _blank
 
 googlefonts:
-  - url: "https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+  - url: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
   - url: "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
   - url: "https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap"
 

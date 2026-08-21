@@ -672,7 +672,7 @@ a {
 
 // ====== HEADING STYLES ======
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: $primary-color;
 }
 
@@ -944,6 +944,15 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-chulapa .dropdown-menu .dropdown-item:hover, .navbar-chulapa .dropdown-menu .dropdown-item:focus {
     color: $secondary-hover;
 }
+.navbar-chulapa .dropdown-menu .dropdown-item {
+    border-bottom: 1px solid #dee2e6;
+    line-height: 1.8;
+    font-size: 0.85rem;
+    text-transform: none !important;
+}
+.navbar-chulapa .dropdown-menu .dropdown-item:last-child {
+    border-bottom: none;
+}
 .navbar-brand {
     text-transform: none !important;
     text-decoration: none !important;
@@ -989,7 +998,7 @@ body.ida-header {
   .hero-chulapa,
   .splash-chulapa,
   .splash-chulapa-image {
-    font-family: Rajdhani, sans-serif;
+    font-family: Open Sans, sans-serif;
     background-color: transparent;
     min-height: 10vh;
   }
@@ -997,7 +1006,7 @@ body.ida-header {
 
 // IDA Header type
 .ida-header-image {
-  font-family: Rajdhani, sans-serif;
+  font-family: Open Sans, sans-serif;
   background-color: transparent;
   text-align: center;
   min-height: 10vh;
