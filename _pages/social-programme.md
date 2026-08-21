@@ -15,19 +15,26 @@ ida-header: true
 
     <div class="row">
         {% for event in site.data.social_programme %}
-        <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card h-100" style="border-top: 4px solid #07286E;">
-                <div class="card-body">
-                    <h5 class="card-title">{{ event.title }}</h5>
-                    <p class="card-text">
-                        <strong><i class="fas fa-calendar-alt"></i> {{ event.date }}</strong><br>
-                        <i class="fas fa-clock"></i> {{ event.time }}<br>
-                        <i class="fas fa-map-marker-alt"></i> {{ event.venue }}
-                    </p>
-                    <p class="card-text">{{ event.description }}</p>
-                    {% if event.bus_info %}
-                    <p class="card-text"><small class="text-muted"><i class="fas fa-bus"></i> {{ event.bus_info }}</small></p>
-                    {% endif %}
+        <div class="col-12 mb-4">
+            <div class="card social-card h-100 rounded-0" style="border-left: 4px solid #000;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3">{{ event.title }}</h4>
+                            <p class="card-text mb-2">
+                                <strong><i class="fas fa-calendar-alt"></i> {{ event.date }}</strong><br>
+                                <i class="fas fa-clock"></i> {{ event.time }}<br>
+                                <i class="fas fa-map-marker-alt"></i> {{ event.venue }}
+                            </p>
+                            <p class="card-text">{{ event.description }}</p>
+                            {% if event.bus_info %}
+                            <p class="card-text"><small class="text-muted"><i class="fas fa-bus"></i> {{ event.bus_info }}</small></p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <img src="{{ event.image | relative_url }}" class="card-img-right h-100" alt="{{ event.title }}" style="object-fit: cover;" onerror="this.onerror=null;this.src='https://picsum.photos/800/250?blur';">
+                    </div>
                 </div>
             </div>
         </div>

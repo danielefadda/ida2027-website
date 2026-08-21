@@ -1124,3 +1124,24 @@ details {
     margin-bottom: 0;
   }
 }
+
+// ====== SOCIAL PROGRAMME CARDS ======
+.social-card {
+  min-height: 250px;
+  overflow: hidden;
+  border-radius: 0 !important;
+
+  .card-img-right {
+    min-height: 250px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    color: $primary-color;
+    font-weight: 700;
+  }
+}

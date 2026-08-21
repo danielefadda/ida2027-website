@@ -4,6 +4,7 @@
   venue: "Conference Venue"
   description: "Opening reception with drinks and bites."
   bus_info: ""
+  image: "/assets/images/social/welcome-reception.jpg"
 
 - title: "Poster Session & Lunch Buffet"
   date: "Thursday, April 23"
@@ -11,6 +12,7 @@
   venue: "Botanical Garden"
   description: "Poster session with lunch buffet at the botanical garden."
   bus_info: ""
+  image: "/assets/images/social/poster-session.jpg"
 
 - title: "Conference Dinner"
   date: "Thursday, April 23"
@@ -18,10 +20,12 @@
   venue: "Restaurant Name"
   description: "Conference dinner with participants."
   bus_info: "Bus from venue at 18:30"
+  image: "/assets/images/social/conference-dinner.jpg"
 
 - title: "Farewell Drinks"
   date: "Friday, April 24"
   time: "17:30"
   venue: "City Cafe"
-  description: "Informal farewell drinks."
+  description: "Some of you may have already departed Pisa to go back home, but for the leftovers we will organize an informal farewell drink at a nice location in the beautiful center or Leiden. Feel free, but not obliged, to say goodbye!"
   bus_info: ""
+  image: "/assets/images/social/farewell-drinks.jpg"
