@@ -2,8 +2,8 @@
 ---
 // Your custom css /scss here
 
-#sezione-1, #sezione-11, #sezione-12 {
-  scroll-margin-top: 60px; /* Imposta lo spazio di scorrimento prima dell'elemento ancorato */
+[id] {
+  scroll-margin-top: 116px; /* navbar height (106px) + 10px buffer */
 }
 
 .tech {

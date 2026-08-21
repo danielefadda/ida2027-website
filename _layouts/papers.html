@@ -1,5 +1,5 @@
 ---
-layout: default-full
+layout: default
 ---
 
 <main class="container-lg pb-3 flex-fill">
@@ -9,8 +9,7 @@ layout: default-full
         <div class="col-md-6">
             <input type="text" id="paperSearch" class="form-control" 
                    placeholder="Search papers by title or author...">
-        </div>
-        <div class="col-md-6">
+            <br>
             <div class="btn-group" role="group">
                 <button type="button" class="btn btn-outline-primary filter-btn active" data-filter="all">
                     All ({{ site.data.papers | size }})

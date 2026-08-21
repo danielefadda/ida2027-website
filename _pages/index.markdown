@@ -2,49 +2,19 @@
 layout: default-full
 title: "IDA 2027"
 header_title: "IDA 2027"
-subtitle: "25th International Symposium on Intelligent Data Analysis"
+subtitle: "25th International Symposium on Intelligent Data Analysis <br><span class=\"small\">April 22-24, 2027</span> | Pisa, Italy"
 header_type: hero
 header_img: /assets/images/ida2027-hero.jpg
 project_links:
-    - url: https://github.com/XXX # url1
-      icon: fab fa-github         # Fontawesome icon code1
-      label: View on Github       # Label on button 1
-    - url: https://colab.research.google.com/XXX #url2
-      icon: fab fa-python   # Fontawesome icon code2
-      label: Open in Colab  # Label on button 2
+    - url: '/registration/' 
+      icon: fas fa-ticket-alt        # Icona del biglietto d'ingresso
+      label: Register Now      
+    - url: '/regular-paper-track/' 
+      icon: fas fa-paper-plane       # Icona aeroplanino di carta (invio)
+      label: Submit Paper
 ---
 
 <div class="container-lg mt-4">
-    <div class="home-header text-center mb-5">
-        <div class="row">
-            <div class="col-lg-12 text-center mb-5">
-                <h1 style="font-size: 3rem; font-weight: 700;">IDA 2027</h1>
-                <h2 style="font-weight: 400;">25th International Symposium on Intelligent Data Analysis</h2>
-                <p class="lead mt-3">
-                    <strong>April 22-24, 2027</strong> &mdash; Location TBD
-                </p>
-                <div class="mt-4">
-                    <a href="{{ '/registration/' | relative_url }}" class="btn btn-primary btn-lg me-3">Register Now</a>
-                    <a href="{{ '/regular-paper-track/' | relative_url }}" class="btn btn-outline-primary btn-lg">Submit a Paper</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="row mb-5">
-        <div class="col-lg-12">
-            <h3 class="mb-4">Key Dates</h3>
-            <div class="badge-container">
-                {% for key in site.data.dates %}
-                <div class="card stat-card" style="min-width: 180px;">
-                    <div class="card-body">
-                        <div class="stat-value accent-secondary">{{ key[1].display }}</div>
-                        <div class="stat-label">{{ key[1].label }}</div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div> -->
     <div class="row mb-5">
         <div class="col-6">
             <h3>Symposium on Intelligent Data Analysis 2027</h3>
@@ -65,8 +35,8 @@ project_links:
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Key Date</th>
-                        <th>Event</th>
+                        <th style="width: 200px;">Key Date</th>
+                        <th style="width: 65%;">Event</th>
                     </tr>
                 </thead>
                 <tbody>
