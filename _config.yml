@@ -89,7 +89,7 @@ relative_links:
 collections:
   pages:
     output: true
-    permalink: /:path
+    permalink: /:path/
 
 footer:
   links:

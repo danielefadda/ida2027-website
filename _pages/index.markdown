@@ -1,6 +1,7 @@
 ---
 layout: default-full
 title: "IDA 2027"
+permalink: /
 header_title: "IDA 2027"
 subtitle: "25th International Symposium on Intelligent Data Analysis <br><span class=\"small\">April 22-24, 2027</span> | Pisa, Italy"
 header_type: hero
