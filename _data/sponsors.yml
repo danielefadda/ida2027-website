@@ -1,14 +1,19 @@
 - name: "University of Example"
-  logo: "assets/images/sponsors/university-logo.png"
+  logo: ""
   url: "https://example.com"
   tier: "gold"
 
 - name: "Research Institute"
-  logo: "assets/images/sponsors/institute-logo.png"
+  logo: ""
   url: "https://example.com"
   tier: "silver"
 
 - name: "Tech Partner"
-  logo: "assets/images/sponsors/partner-logo.png"
+  logo: ""
   url: "https://example.com"
   tier: "supporter"
+
+- name: "University of Example"
+  logo: ""
+  url: "https://example.com"
+  tier: "gold"

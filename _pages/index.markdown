@@ -17,7 +17,7 @@ project_links:
 <div class="container-lg mt-4">
     <div class="row mb-5">
         <div class="col-6">
-            <h3>Symposium on Intelligent Data Analysis 2027</h3>
+            <h3>25th International Symposium on Intelligent Data Analysis</h3>
             <p>
                 Advancing <em>Intelligent Data Analysis</em> requires novel, potentially game-changing ideas. 
                 IDA's mission is to promote ideas over performance: a solid motivation can be as convincing as 
@@ -77,7 +77,16 @@ project_links:
                 <a href="{{ sponsor.url }}" target="_blank" class="partner-item-link">
                     <div class="partner-item partner-{{ sponsor.tier }}">
                         <div class="partner-logo-wrapper">
+                            {% if sponsor.logo != "" %}
                             <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" class="partner-logo">
+                            {% else %}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+                              <circle cx="160" cy="100" r="45" fill="#ccc"/>
+                              <rect x="220" y="72" width="90" height="12" rx="6" fill="#ccc"/>
+                              <rect x="220" y="94" width="60" height="8" rx="4" fill="#ddd"/>
+                              <rect x="220" y="110" width="75" height="8" rx="4" fill="#ddd"/>
+                            </svg>
+                            {% endif %}
                         </div>
                         <div class="partner-info">
                             <p class="partner-name">{{ sponsor.name }}</p>
