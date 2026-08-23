@@ -81,6 +81,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-relative-links
+  -
 
 relative_links:
   enabled: true
@@ -89,7 +90,7 @@ relative_links:
 collections:
   pages:
     output: true
-    permalink: /:path/
+    permalink: /:path
 
 footer:
   links:
