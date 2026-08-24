@@ -2,6 +2,7 @@
 layout: default
 title: "Regular Paper Track"
 header_type: "ida"
+header_white: true
 header_title: "IDA 2027 Regular Paper Track"
 ida-header: true
 show_toc: true

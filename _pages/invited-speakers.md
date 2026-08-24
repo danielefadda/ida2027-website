@@ -2,6 +2,7 @@
 layout: speakers
 title: "Invited Speakers"
 header_type: "ida"
+header_white: true
 header_title: "IDA 2027 Invited Speakers"
 ida-header: true
 ---

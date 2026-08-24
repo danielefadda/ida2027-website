@@ -2,6 +2,7 @@
 layout: programme
 title: "Programme Overview"
 header_type: "ida"
+header_white: true
 header_title: "IDA 2027 Programme Overview"
 ida-header: true
 ---

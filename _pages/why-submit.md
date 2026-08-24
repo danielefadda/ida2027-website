@@ -2,6 +2,7 @@
 layout: default
 title: "Why Submit to IDA?"
 header_type: "ida"
+header_white: true
 header_title: "Why Submit to IDA 2027?"
 ida-header: true
 show_toc: true

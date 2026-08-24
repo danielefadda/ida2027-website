@@ -2,11 +2,11 @@
   {%- if include.imghero and include.imghero != "" -%}
     {%- assign hero_bg = include.imghero | relative_url -%}
   {%- else -%}
-    {%- assign hero_bg = "https://picsum.photos/1920/600?blur" -%}
+    {%- assign hero_bg = "https://picsum.photos/id/102/1920/600?blur" -%}
   {%- endif -%}
 <header class="d-flex align-items-center ida-header-image" style="background-image: url('{{ hero_bg }}');">
   <div class="container-lg">
-    <h1 class="p-name" >{{- page.header_title | default: "Where's your title?" -}}</h1>
+    <h1 class="p-name{% if page.header_white %} text-white{% endif %}" >{{- page.header_title | default: "Where's your title?" -}}</h1>
     {%- if page.subtitle -%}
     <hr class="my-3">
     <p class="chulapa-subtitle p-summary">{{- page.subtitle -}}</p>
@@ -28,7 +28,7 @@
 <header class="d-flex align-items-center splash-chulapa">
   {%- endif -%}
   <div class="container-lg">
-    <h1 class="p-name" >{{- page.header_title | default: "Where's your title?" -}}</h1>
+    <h1 class="p-name{% if page.header_white %} text-white{% endif %}" >{{- page.header_title | default: "Where's your title?" -}}</h1>
     {%- if page.subtitle -%}
     <hr class="my-3">
     <p class="chulapa-subtitle p-summary">{{- page.subtitle -}}</p>
@@ -50,7 +50,7 @@
 <header class="d-flex align-items-center hero-chulapa">
   {%- endif -%}
   <div class="container-lg py-4">
-    <h2 class="display-4 text-white" style="font-weight: 700;">{{- page.header_title | default: "Where's your title?" -}}</h2>
+    <h2 class="display-4{% if page.header_white %} text-white{% else %} text-black{% endif %}" style="font-weight: 700;">{{- page.header_title | default: "Where's your title?" -}}</h2>
     {%- if page.subtitle -%}
     <p class="chulapa-subtitle p-summary">{{- page.subtitle -}}</p>
     {%- endif -%}
@@ -73,7 +73,7 @@
       <div class="container-lg mt-2">
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
-            <h1 class="p-name">{{- page.header_title | default: "Where's your title?" -}}</h1>
+            <h1 class="p-name{% if page.header_white %} text-white{% endif %}"">{{- page.header_title | default: "Where's your title?" -}}</h1>
             {%- if page.subtitle -%}
             <p class="lead chulapa-subtitle p-summary">{{- page.subtitle -}}</p>
             {%- endif -%}
@@ -99,7 +99,7 @@
       <div class="container-lg mt-2">
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
-            <h1 class="p-name">{{- page.header_title | default: "Where's your title?" -}}</h1>
+            <h1 class="p-name{% if page.header_white %} text-white{% endif %}"{{- page.header_title | default: "Where's your title?" -}}</h1>
             {%- if page.subtitle -%}
             <p class="lead chulapa-subtitle p-summary">{{- page.subtitle -}}</p>
             {%- endif -%}

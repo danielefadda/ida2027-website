@@ -2,6 +2,7 @@
 layout: registration-table
 title: "Registration"
 header_type: "ida"
+header_white: true
 header_title: "IDA 2027 Registration"
 ida-header: true
 ---

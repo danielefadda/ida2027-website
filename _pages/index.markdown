@@ -5,6 +5,7 @@ permalink: /
 header_title: "IDA 2027"
 subtitle: "25th International Symposium on Intelligent Data Analysis <br><span class=\"small\">April 22-24, 2027</span> | Pisa, Italy"
 header_type: hero
+header_white: true
 header_img: /assets/images/ida2027-hero.jpg
 project_links:
     - url: '/registration/' 
