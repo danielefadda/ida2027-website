@@ -3,7 +3,7 @@ layout: programme
 title: "Programme Overview"
 header_type: "conference"
 header_white: true
-header_title: "{{ site.conference.acronym }} Programme Overview"
+header_title: "Programme Overview"
 conference-header: true
 ---
 

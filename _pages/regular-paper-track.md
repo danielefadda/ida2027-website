@@ -3,7 +3,7 @@ layout: default
 title: "Regular Paper Track"
 header_type: "conference"
 header_white: true
-header_title: "{{ site.conference.acronym }} Regular Paper Track"
+header_title: "Regular Paper Track"
 conference-header: true
 show_toc: true
 ---

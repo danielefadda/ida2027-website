@@ -3,7 +3,7 @@ layout: papers
 title: "Accepted Papers"
 header_type: "conference"
 header_white: true
-header_title: "{{ site.conference.acronym }} Accepted Papers"
+header_title: "Accepted Papers"
 conference-header: true
 ---
 

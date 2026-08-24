@@ -3,7 +3,7 @@ layout: speakers
 title: "Invited Speakers"
 header_type: "conference"
 header_white: true
-header_title: "{{ site.conference.acronym }} Invited Speakers"
+header_title: "Invited Speakers"
 conference-header: true
 ---
 

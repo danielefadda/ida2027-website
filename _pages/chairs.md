@@ -3,7 +3,7 @@ layout: committee
 title: "Chairs"
 header_type: "conference"
 header_white: true
-header_title: "{{ site.conference.acronym }} Chairs"
+header_title: "Chairs"
 conference-header: true
 ---
 

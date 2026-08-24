@@ -1,11 +1,11 @@
 # Conference Website — Jekyll Template
 
 title: "Conference 202X"
-subtitle: "{{ site.conference.edition }} {{ site.conference.name }}"
+subtitle: "25th International Symposium on Intelligent Data Analysis"
 email: "contact@conference.org"
 description: >-
-  Conference: {{ site.conference.edition }} {{ site.conference.name }}.
-  Advancing {{ site.conference.topic }} with novel, potentially game-changing ideas.
+  Conference 202X: 25th International Symposium on Intelligent Data Analysis.
+  Advancing Intelligent Data Analysis with novel, potentially game-changing ideas.
 
 conference:
   name: "International Symposium on Intelligent Data Analysis"
@@ -23,7 +23,7 @@ remote_theme: "dieghernan/chulapa"
 navbar:
   style: dual
   brand:
-    title: "Conference 202X"
+    title: ""
     img: "./assets/images/conference-logo-white.svg"
     url: /
   nav:

@@ -3,7 +3,7 @@ layout: default
 title: "PhD Forum"
 header_type: "conference"
 header_white: true
-header_title: "{{ site.conference.acronym }} PhD Forum"
+header_title: "PhD Forum"
 conference-header: true
 show_toc: true
 ---

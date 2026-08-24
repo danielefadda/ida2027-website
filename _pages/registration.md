@@ -3,7 +3,7 @@ layout: registration-table
 title: "Registration"
 header_type: "conference"
 header_white: true
-header_title: "{{ site.conference.acronym }} Registration"
+header_title: "Registration"
 conference-header: true
 ---
 

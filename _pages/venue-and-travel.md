@@ -3,7 +3,7 @@ layout: default
 title: "Venue and Travel"
 header_type: "conference"
 header_white: true
-header_title: "{{ site.conference.acronym }} Venue and Travel"
+header_title: "Venue and Travel"
 conference-header: true
 show_toc: true
 ---

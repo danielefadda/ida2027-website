@@ -3,7 +3,7 @@ layout: default-full
 title: "Social Programme"
 header_type: "conference"
 header_white: true
-header_title: "{{ site.conference.acronym }} Social Programme"
+header_title: "Social Programme"
 conference-header: true
 ---
 

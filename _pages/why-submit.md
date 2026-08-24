@@ -3,7 +3,7 @@ layout: default
 title: "Why Submit?"
 header_type: "conference"
 header_white: true
-header_title: "Why Submit to Conference?"
+header_title: "Why Submit?"
 conference-header: true
 show_toc: true
 ---
