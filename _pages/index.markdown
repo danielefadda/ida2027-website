@@ -3,7 +3,7 @@ layout: default-full
 title: "Conference"
 permalink: /
 header_title: "Conference 202X"
-subtitle: "25th International Symposium on Conference Topic<br><span class=\"small\">Month d1-d2, 202X</span> | City, Country"
+subtitle: "25<sup>th</sup> International Symposium on Conference Topic<br><span class=\"small\">Month d1-d2, 202X</span> | City, Country"
 header_type: hero
 header_white: true
 header_img: /assets/images/hero.jpg
