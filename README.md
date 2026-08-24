@@ -4,6 +4,33 @@ This repository contains a **Jekyll** static site template designed for academic
 
 The template is data-driven: all conference content lives in `_data/*.yml` files, while layouts, includes, and CSS handle structure and styling. This makes it easy to customize for different conferences without modifying template code.
 
+## Table of Contents
+
+- [Part 1: Getting Started](#part-1-getting-started)
+  - [What is this template?](#what-is-this-template)
+  - [Prerequisites](#prerequisites)
+    - [Installing Ruby on macOS with chruby](#installing-ruby-on-macos-with-chruby)
+  - [Install in Local](#install-in-local)
+  - [Configuration](#configuration)
+    - [Site Metadata](#site-metadata)
+    - [Navbar](#navbar)
+    - [Colors & Fonts](#colors--fonts)
+    - [Footer](#footer)
+    - [Build Config for Localserver](#build-config-for-localserver)
+- [Part 2: Site Structure](#part-2-site-structure)
+  - [Directory Overview](#directory-overview)
+  - [Data Files (`_data/`)](#data-files-_data)
+  - [Pages (`_pages/`)](#pages-_pages)
+  - [Cross-Cutting Elements](#cross-cutting-elements)
+    - [Menu (Navbar)](#menu-navbar)
+    - [Footer](#footer-1)
+    - [Headers](#headers)
+    - [Favicon & Images](#favicon--images)
+- [Part 3: Using as a GitHub Template](#part-3-using-as-a-github-template)
+  - [How to use this template](#how-to-use-this-template)
+  - [Screenshots](#screenshots)
+- [Credits](#credits)
+
 ---
 
 ## Part 1: Getting Started
@@ -21,13 +48,45 @@ The site is structured as a **conference website**, not a blog. It has no posts 
 
 ### Prerequisites
 
-| Requirement | Version | Installation |
-|------------|---------|--------------|
-| Ruby | `>= 3.4` | `rbenv install 3.4.2` / `rvm install 3.4.2` |
-| Jekyll | `~> 3.10` | `gem install jekyll bundler` |
-| Bundler | `~> 2.6` | `gem install bundler` |
+| Requirement | Version | Notes |
+|------------|---------|-------|
+| Ruby | `>= 3.4` (tested with 3.4.1) | See installation instructions below |
+| Jekyll | `~> 3.10` | Installed via Bundler |
+| Bundler | `~> 2.6` | Installed via gem |
 
-> **Note on macOS:** You may need `xcode-select --install` for build tools, and `brew install ruby` if Ruby is not present.
+> **Note on macOS:** You need the Xcode Command Line Tools for native extensions. Install them with `xcode-select --install` if not already present.
+
+#### Installing Ruby on macOS with chruby
+
+[chruby](https://github.com/postmodern/chruby) is a lightweight Ruby version manager. It does **not** manage installations — you need to install Ruby separately (e.g. via ruby-install).
+
+```bash
+# 1. Install chruby and ruby-install via Homebrew
+brew install chruby ruby-install
+
+# 2. Install Ruby 3.4.1 (matches the version used in this project)
+ruby-install --latest ruby
+
+# 3. Configure your shell (~/.zshrc or ~/.bashrc)
+echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc
+echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc
+
+# 4. Restart your terminal, then select the installed version
+chruby 3.4.1
+
+# 5. Verify
+ruby --version   # => ruby 3.4.1
+gem --version
+```
+
+Then proceed with the project setup:
+
+```bash
+gem install bundler
+bundle install
+```
+
+> **Alternative managers:** The README uses chruby, but [rbenv](https://github.com/rbenv/rbenv) or [RVM](https://rvm.io/) work equally well. Replace `chruby` with `rbenv install 3.4.1 && rbenv global 3.4.1` if preferred.
 
 ### Install in Local
 
@@ -46,9 +105,6 @@ The site is structured as a **conference website**, not a blog. It has no posts 
    ```bash
    # Standard local development
    bundle exec jekyll serve --livereload
-
-   # With local Chulapa gem (see Configuration below)
-   bundle exec jekyll serve --config _config.dev.yml --livereload
    ```
 
 4. **Visit** `http://localhost:4000` to see the site.
@@ -306,7 +362,8 @@ Build the site locally first (`bundle exec jekyll serve`), then capture a screen
 ## Credits
 
 - **Theme:** Chulapa (`dieghernan/chulapa`) — remote theme for Jekyll
-- **License:** MIT (or specify your license)
+- **License:** MIT 
+- **Customizations:** This template is a derivative work of Chulapa, with additional layouts, data-driven architecture, and conference-specific features made by Daniele Fadda.
 
 ---
 
