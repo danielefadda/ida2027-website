@@ -1,16 +1,16 @@
 ---
 layout: default
 title: "Venue and Travel"
-header_type: "ida"
+header_type: "conference"
 header_white: true
-header_title: "IDA 2027 Venue and Travel"
-ida-header: true
+header_title: "{{ site.conference.acronym }} Venue and Travel"
+conference-header: true
 show_toc: true
 ---
 
 ## Venue
 
-**IDA 2027 will take place at:**
+**{{ site.conference.acronym }} will take place at:**
 
 Venue Name  
 Address  
@@ -44,4 +44,4 @@ A curated selection of hotels will be available through the conference booking s
 
 ## Visa Information
 
-If you require a visa to attend IDA 2027, please contact the organizers for an invitation letter after your registration has been confirmed.
+If you require a visa to attend {{ site.conference.acronym }}, please contact the organizers for an invitation letter after your registration has been confirmed.

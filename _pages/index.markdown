@@ -1,18 +1,18 @@
 ---
 layout: default-full
-title: "IDA 2027"
+title: "Conference"
 permalink: /
-header_title: "IDA 2027"
-subtitle: "25<sup>th</sup> International Symposium on Intelligent Data Analysis <br><span class=\"small\">Month d1-d2, 202x</span> | City, Country"
+header_title: "Conference 202X"
+subtitle: "{{ site.conference.edition }} {{ site.conference.name }}<br><span class=\"small\">{{ site.conference.dates }}</span> | {{ site.conference.location }}"
 header_type: hero
 header_white: true
-header_img: /assets/images/ida2027-hero.jpg
+header_img: /assets/images/hero.jpg
 project_links:
     - url: '/registration/' 
-      icon: fas fa-ticket-alt        # Icona del biglietto d'ingresso
+      icon: fas fa-ticket-alt
       label: Register Now      
     - url: '/regular-paper-track/' 
-      icon: fas fa-paper-plane       # Icona aeroplanino di carta (invio)
+      icon: fas fa-paper-plane
       label: Submit Paper
 ---
 

@@ -1,4 +1,4 @@
-early_deadline: "March 7, 2027"
+early_deadline: "March 7, 202X"
 
 categories:
   - name: "Student"
@@ -10,7 +10,7 @@ categories:
     late: 599
     note: ""
 
-registration_url: "https://example.com/ida2027-registration"
+registration_url: "https://example.com/conference-registration"
 
 includes:
   - All sessions and presentations

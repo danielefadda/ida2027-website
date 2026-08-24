@@ -59,20 +59,20 @@ All site configuration lives in **`_config.yml`**. Key sections, using the confi
 
 #### Site Metadata
 ```yaml
-title: "Conference Name"
-subtitle: "Conference Subtitle"
+title: "Conference 202X"
+subtitle: "{{ site.conference.edition }} {{ site.conference.name }}"
 email: "contact@conference.org"
 description: >-
   Conference description.
 
 conference:
-  name: "Conference Name"
-  edition: "Edition Year"
-  acronym: "CONF YEAR"
+  name: "International Symposium on Intelligent Data Analysis"
+  edition: "25th"
+  acronym: "CONF 202X"
   year: 202X
   location: "City, Country"
-  dates: "Month n-m, 202X"
-  topic: "Conference Topic"
+  dates: "Month d1-d2, 202X"
+  topic: "Intelligent Data Analysis"
 
 markdown: kramdown
 
@@ -84,8 +84,8 @@ remote_theme: "dieghernan/chulapa"
 navbar:
   style: dual        # "fab", "dual", or default Bootstrap style
   brand:
-    title: "Conference Name"
-    img: "./assets/images/conference-logo.svg"
+    title: "Conference 202X"
+    img: "./assets/images/conference-logo-white.svg"
     url: /
   nav:
     - title: Home
@@ -94,7 +94,7 @@ navbar:
       child:
         - title: Why Submit?
           url: /why-submit/
-        - title: Paper Track
+        - title: Regular Paper Track
           url: /regular-paper-track/
         - title: PhD Forum
           url: /phd-forum/
@@ -119,7 +119,7 @@ navbar:
         - title: Registration
           url: /registration/
     - title: Submission System
-      url: https://cmt3.research.microsoft.com/CONF202X/
+      url: https://example.com/conference-submission/
       target: _blank
 ```
 
@@ -158,8 +158,8 @@ footer:
       url: "https://www.linkedin.com/groups/conference/"
     - label: "Facebook"
       icon: "fab fa-facebook"
-      url: "httpswww.facebook.com/conference/"
-  copyright: "20XX - Conference Name"
+      url: "https://www.facebook.com/conference/"
+  copyright: "202X - Conference Website"
 ```
 
 #### Build Config for Localserver
@@ -219,16 +219,16 @@ All pages use the `_pages/` Jekyll collection with `permalink: /:path`. The 11 p
 | Page | Layout | Header Type | Purpose |
 |------|--------|-------------|---------|
 | **Home** | `default-full` | `hero` | Homepage with hero image, key data, sponsors |
-| **Why Submit** | `default` | `ida` | Persuasive copy about conference submission |
-| **Paper Track** | `default` | `ida` | Submission guidelines and important dates |
-| **PhD Forum** | `default` | `ida` | PhD Forum description and guidelines |
-| **Programme Overview** | `programme` | `ida` | Tabbed 3-day schedule |
-| **Accepted Papers** | `papers` | `ida` | Paper list with search/filter |
-| **Invited Speakers** | `speakers` | `ida` | Speaker cards with modal popups |
-| **Social Programme** | `default-full` | `ida` | Event cards with images |
-| **Chairs** | `committee` | `ida` | Committee member cards with modals |
-| **Registration** | `registration-table` | `ida` | Pricing table and registration |
-| **Venue & Travel** | `default` | `ida` | Venue, travel, accommodation info |
+| **Why Submit** | `default` | `conference` | Persuasive copy about conference submission |
+| **Paper Track** | `default` | `conference` | Submission guidelines and important dates |
+| **PhD Forum** | `default` | `conference` | PhD Forum description and guidelines |
+| **Programme Overview** | `programme` | `conference` | Tabbed 3-day schedule |
+| **Accepted Papers** | `papers` | `conference` | Paper list with search/filter |
+| **Invited Speakers** | `speakers` | `conference` | Speaker cards with modal popups |
+| **Social Programme** | `default-full` | `conference` | Event cards with images |
+| **Chairs** | `committee` | `conference` | Committee member cards with modals |
+| **Registration** | `registration-table` | `conference` | Pricing table and registration |
+| **Venue & Travel** | `default` | `conference` | Venue, travel, accommodation info |
 
 ### Cross-Cutting Elements
 
@@ -244,8 +244,8 @@ Each page sets `header_type` in its front matter. Six types available:
 | Type | Description |
 |------|-------------|
 | `hero` | Full-width background image with centered title/subtitle |
-| `ida` | Conference-styled header with title, subtitle |
-| `splash` | Like `ida` but with dark gradient overlay |
+| `conference` | Conference-styled header with title, subtitle |
+| `splash` | Like `conference` but with dark gradient overlay |
 | `hero` | Large hero banner with overlay, `display-4` heading |
 | `base` | Centered text header with optional background image |
 | `image` | Full-width image with text overlay below |
@@ -284,7 +284,7 @@ All favicons and the site manifest are configured in **`_includes/custom/custom_
    - `sponsors.yml` — sponsor organizations (if applicable)
 
 4. **Customize branding**:
-   - Replace `assets/images/conference-logo.svg` with your logo
+   - Replace `assets/images/conference-logo-white.svg` with your logo
    - Update Google Fonts URLs in `_config.yml` if using different fonts
    - Modify `assets/css/custom.scss` for color/design changes specific to your conference
 

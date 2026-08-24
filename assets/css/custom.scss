@@ -32,8 +32,8 @@ html {
     z-index: 98;
 }
 
-// Table didattica styles
-.table-didattica {
+// Table styles
+.table-conference {
     table {
         display: table;
         border-collapse: collapse;
@@ -992,8 +992,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// IDA Header customization
-body.ida-header {
+// Conference Header customization
+body.conference-header {
   .hero-chulapa-image {
     background-position: center;
     background-repeat: no-repeat;
@@ -1010,8 +1010,8 @@ body.ida-header {
   }
 }
 
-// IDA Header type
-.ida-header-image {
+// Conference Header type
+.conference-header-image {
   font-family: Open Sans, sans-serif;
   background-color: transparent;
   text-align: center;
@@ -1032,7 +1032,7 @@ body.ida-header {
 
 // ====== HOME HEADER ======
 .home-header {
-  background-image: url('/assets/images/ida2027-hero.jpg') !important;
+  background-image: url('/assets/images/hero.jpg') !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

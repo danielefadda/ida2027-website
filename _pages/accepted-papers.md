@@ -1,15 +1,15 @@
 ---
 layout: papers
 title: "Accepted Papers"
-header_type: "ida"
+header_type: "conference"
 header_white: true
-header_title: "IDA 2027 Accepted Papers"
-ida-header: true
+header_title: "{{ site.conference.acronym }} Accepted Papers"
+conference-header: true
 ---
 
 ## Accepted Papers
 
-Papers accepted for presentation and publication at IDA 2027.
+Papers accepted for presentation and publication at {{ site.conference.acronym }}.
 
 **Regular Papers:** {{ site.data.papers | where: "type", "regular" | size }}
 **PhD Forum Posters:** {{ site.data.papers | where: "type", "phd" | size }}

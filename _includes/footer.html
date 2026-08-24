@@ -3,9 +3,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h3 style="color: #fff;">About IDA 2027</h3>
-                <p>IDA 2027: 25th International Symposium on Intelligent Data Analysis.<br>
-                Advancing Intelligent Data Analysis with novel, potentially game-changing ideas.</p>
+                <h3 style="color: #fff;">About {{ site.conference.acronym }}</h3>
+                <p>{{ site.conference.acronym }}: {{ site.conference.edition }} {{ site.conference.name }}.<br>
+                {{ site.description }}</p>
             </div>
              <div class="col-md-4">
                 <h3 style="color: #fff;">Contacts</h3>
@@ -38,7 +38,7 @@
                 {%- endif -%}
             </div>
             <div class="col-md-4">
-                <img src="{{ '/assets/images/ida2027-logo-white.svg' | relative_url }}" alt="IDA 2027 Logo" style="margin-bottom: 20px; margin-top: 15px; max-width: 200px;">
+                <img src="{{ '/assets/images/conference-logo-white.svg' | relative_url }}" alt="{{ site.conference.acronym }} Logo" style="margin-bottom: 20px; margin-top: 15px; max-width: 200px;">
                 <p class="mb-0">
                     {%- if site.footer.copyright -%}
                     &copy; {{ site.footer.copyright }}

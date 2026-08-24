@@ -1,12 +1,10 @@
 ---
 layout: programme
 title: "Programme Overview"
-header_type: "ida"
+header_type: "conference"
 header_white: true
-header_title: "IDA 2027 Programme Overview"
-ida-header: true
+header_title: "{{ site.conference.acronym }} Programme Overview"
+conference-header: true
 ---
 
-The IDA 2027 programme features keynote talks, plenary paper sessions, poster sessions, and social events over three days.
-
-
+The {{ site.conference.acronym }} programme features keynote talks, plenary paper sessions, poster sessions, and social events over three days.

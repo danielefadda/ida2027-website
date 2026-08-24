@@ -1,19 +1,19 @@
-# IDA 2027 — 25th International Symposium on Intelligent Data Analysis
+# Conference Website — Jekyll Template
 
-title: "IDA 2027"
-subtitle: "25th International Symposium on Intelligent Data Analysis"
-email: "ida2027@conference.org"
+title: "Conference 202X"
+subtitle: "{{ site.conference.edition }} {{ site.conference.name }}"
+email: "contact@conference.org"
 description: >-
-  IDA 2027: 25th International Symposium on Intelligent Data Analysis.
-  Advancing Intelligent Data Analysis with novel, potentially game-changing ideas.
+  Conference: {{ site.conference.edition }} {{ site.conference.name }}.
+  Advancing {{ site.conference.topic }} with novel, potentially game-changing ideas.
 
 conference:
   name: "International Symposium on Intelligent Data Analysis"
   edition: "25th"
-  acronym: "IDA 2027"
-  year: 2027
+  acronym: "CONF 202X"
+  year: 202X
   location: "City, Country"
-  dates: "Month n-m, 202x"
+  dates: "Month d1-d2, 202X"
   topic: "Intelligent Data Analysis"
 
 markdown: kramdown
@@ -23,15 +23,15 @@ remote_theme: "dieghernan/chulapa"
 navbar:
   style: dual
   brand:
-    title: ""
-    img: "./assets/images/ida2027-logo-white.svg"
+    title: "Conference 202X"
+    img: "./assets/images/conference-logo-white.svg"
     url: /
   nav:
     - title: Home
       url: /
     - title: Submissions
       child:
-        - title: Why Submit to IDA?
+        - title: Why Submit?
           url: /why-submit/
         - title: Regular Paper Track
           url: /regular-paper-track/
@@ -58,7 +58,7 @@ navbar:
         - title: Registration
           url: /registration/
     - title: Submission System
-      url: https://cmt3.research.microsoft.com/IDA2027/
+      url: https://example.com/conference-submission/
       target: _blank
 
 googlefonts:
@@ -104,14 +104,14 @@ footer:
   links:
     - label: "Bluesky"
       icon: "fab fa-bluesky"
-      url: "https://bsky.app/profile/ida-symposia.bsky.social"
+      url: "https://bsky.app/profile/conference.bsky.social"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/groups/13391032/"
+      url: "https://www.linkedin.com/groups/conference/"
     - label: "Facebook"
       icon: "fab fa-facebook"
-      url: "https://www.facebook.com/IDAsymposia/"
-  copyright: "2027 - Symposium on Intelligent Data Analysis (IDA 2027)"
+      url: "https://www.facebook.com/conference/"
+  copyright: "202X - Conference Website"
 
 sass:
   quiet_deps: true

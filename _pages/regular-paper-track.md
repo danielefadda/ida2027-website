@@ -1,14 +1,14 @@
 ---
 layout: default
 title: "Regular Paper Track"
-header_type: "ida"
+header_type: "conference"
 header_white: true
-header_title: "IDA 2027 Regular Paper Track"
-ida-header: true
+header_title: "{{ site.conference.acronym }} Regular Paper Track"
+conference-header: true
 show_toc: true
 ---
 
-IDA 2027 invites submissions of original, high-quality research papers in all areas of intelligent data analysis. IDA's mission is to promote ideas over performance: a solid motivation can be as convincing as exhaustive empirical evaluation.
+{{ site.conference.acronym }} invites submissions of original, high-quality research papers in all areas of {{ site.conference.topic }}. {{ site.conference.acronym }}'s mission is to promote ideas over performance: a solid motivation can be as convincing as exhaustive empirical evaluation.
 
 ## Submission Guidelines
 
@@ -20,9 +20,9 @@ IDA 2027 invites submissions of original, high-quality research papers in all ar
 
 ### Where to Submit
 
-Submissions must be made through the CMT submission system:
+Submissions must be made through the submission system:
 
-[IDA 2027 Submission System](https://cmt3.research.microsoft.com/IDA2027/)
+[Submission System](https://example.com/conference-submission/)
 
 ### Important Dates
 
@@ -37,10 +37,10 @@ Submissions must be made through the CMT submission system:
 
 ### How to Submit
 
-1. Create a CMT account (if you don't have one)
+1. Create an account (if you don't have one)
 2. Select the **Regular Paper Track** (not PhD Forum)
 3. Upload your paper in PDF format
-4. Follow the [CMT submission instructions](https://cmt3.research.microsoft.com/)
+4. Follow the submission instructions
 
 ### Review Process
 
@@ -63,4 +63,4 @@ Accepted papers will be published in the **Lecture Notes in Computer Science (LN
 
 ## Previous Proceedings
 
-Proceedings of previous IDA symposia are available on [Springer](https://link.springer.com/book/10.1007/978-3-030-XXXXX-X).
+Proceedings of previous editions are available on [Springer](https://link.springer.com/book/10.1007/978-3-030-XXXXX-X).

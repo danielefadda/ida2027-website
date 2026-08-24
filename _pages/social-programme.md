@@ -1,17 +1,17 @@
 ---
 layout: default-full
 title: "Social Programme"
-header_type: "ida"
+header_type: "conference"
 header_white: true
-header_title: "IDA 2027 Social Programme"
-ida-header: true
+header_title: "{{ site.conference.acronym }} Social Programme"
+conference-header: true
 ---
 
 <main class="container-lg pb-3 flex-fill">
     <div class="row pt-4">
         <div class="col-12">
             <h1 class="mb-4">Social Programme</h1>
-            <p class="lead mb-4">IDA 2027 offers a rich social programme to help participants connect and enjoy the host city.</p>
+            <p class="lead mb-4">{{ site.conference.acronym }} offers a rich social programme to help participants connect and enjoy the host city.</p>
         </div>
     </div>
 

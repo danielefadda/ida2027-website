@@ -1,10 +1,10 @@
 ---
 layout: speakers
 title: "Invited Speakers"
-header_type: "ida"
+header_type: "conference"
 header_white: true
-header_title: "IDA 2027 Invited Speakers"
-ida-header: true
+header_title: "{{ site.conference.acronym }} Invited Speakers"
+conference-header: true
 ---
 
-IDA 2027 features invited talks from leading researchers in intelligent data analysis and related fields.
+{{ site.conference.acronym }} features invited talks from leading researchers in {{ site.conference.topic }} and related fields.
