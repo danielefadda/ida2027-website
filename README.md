@@ -1,5 +1,15 @@
 # Conference Website Template
 
+[![Use this template](https://img.shields.io/badge/Use%20this%20template-green?style=for-the-badge&logo=github)](https://github.com/danielefadda/conference-template-website/generate)
+
+This repository is a **GitHub Template**. The fastest and suggested way to get started is to click the **"Use this template"** button above to create a new repository pre-filled with this template's contents. You can then clone your new repository and start customizing it for your conference.
+
+If you prefer, you can also clone the template directly:
+```bash
+git clone https://github.com/danielefadda/conference-template-website.git
+cd conference-template-website
+```
+
 This repository contains a **Jekyll** static site template designed for academic conferences. It uses the **Chulapa** remote theme (`dieghernan/chulapa`) and is configured for **GitHub Pages** deployment.
 
 The template is data-driven: all conference content lives in `_data/*.yml` files, while layouts, includes, and CSS handle structure and styling. This makes it easy to customize for different conferences without modifying template code.
@@ -90,24 +100,18 @@ bundle install
 
 ### Install in Local
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-org/your-conference-website.git
-   cd your-conference-website
-   ```
-
-2. **Install dependencies:**
+1. **Install dependencies:**
    ```bash
    bundle install
    ```
 
-3. **Start the development server:**
+2. **Start the development server:**
    ```bash
    # Standard local development
    bundle exec jekyll serve --livereload
    ```
 
-4. **Visit** `http://localhost:4000` to see the site.
+3. **Visit** `http://localhost:4000` to see the site.
 
 ### Configuration
 
