@@ -81,7 +81,6 @@ plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-relative-links
-  -
 
 relative_links:
   enabled: true

@@ -17,7 +17,7 @@ ida-header: true
     <div class="row">
         {% for event in site.data.social_programme %}
         <div class="col-12 mb-4">
-            <div class="card social-card h-100 rounded-0" style="border-left: 4px solid #000;">
+            <div class="card social-card rounded-0" style="border-left: 4px solid #000;">
                 <div class="row no-gutters">
                     <div class="col-md-4 d-flex align-items-center">
                         <div class="card-body">
@@ -34,7 +34,7 @@ ida-header: true
                         </div>
                     </div>
                     <div class="col-md-8">
-                        <img src="{{ event.image | relative_url }}" class="card-img-right h-100" alt="{{ event.title }}" style="object-fit: cover;" onerror="this.onerror=null;this.src='https://picsum.photos/800/250?blur';">
+                        <img src="{{ event.image | relative_url }}" class="card-img-right" alt="{{ event.title }}" onerror="this.onerror=null;this.src='https://picsum.photos/800/250?blur';">
                     </div>
                 </div>
             </div>

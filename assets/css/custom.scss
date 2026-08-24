@@ -1141,12 +1141,25 @@ details {
 
 // ====== SOCIAL PROGRAMME CARDS ======
 .social-card {
-  min-height: 250px;
   overflow: hidden;
   border-radius: 0 !important;
 
-  .card-img-right {
+  .row.no-gutters {
     min-height: 250px;
+  }
+
+  .col-md-8 {
+    position: relative;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+
+  .card-img-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -1157,6 +1170,15 @@ details {
   .card-title {
     color: $primary-color;
     font-weight: 700;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .social-card .col-md-8 {
+    display: none;
+  }
+  .social-card .row.no-gutters {
+    min-height: auto;
   }
 }
 
