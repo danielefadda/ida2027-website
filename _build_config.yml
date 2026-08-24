@@ -11,3 +11,8 @@ relative_links:
   enabled: true
   collections: true
 pure_relative_paths: true
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
