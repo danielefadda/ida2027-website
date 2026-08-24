@@ -23,7 +23,7 @@ The site is structured as a **conference website**, not a blog. It has no posts 
 
 | Requirement | Version | Installation |
 |------------|---------|--------------|
-| Ruby | `>= 3.0` | `rbenv install 3.1.2` / `rvm install 3.1.2` |
+| Ruby | `>= 3.4` | `rbenv install 3.4.2` / `rvm install 3.4.2` |
 | Jekyll | `~> 3.10` | `gem install jekyll bundler` |
 | Bundler | `~> 2.6` | `gem install bundler` |
 

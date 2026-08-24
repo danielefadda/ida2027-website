@@ -1,14 +1,13 @@
 # Conference Website — Jekyll Template
 
 title: "Conference 202X"
-subtitle: "25th International Symposium on Intelligent Data Analysis"
+subtitle: "25th International Conference on the topic of the conferenceConference 202X: 25th International Conference on the topic of the conference."
 email: "contact@conference.org"
 description: >-
-  Conference 202X: 25th International Symposium on Intelligent Data Analysis.
-  Advancing Intelligent Data Analysis with novel, potentially game-changing ideas.
+  Conference 202X: 25th International Conference on the topic of the conference.
 
 conference:
-  name: "International Symposium on Intelligent Data Analysis"
+  name: "International Conference on the topic of the conference"
   edition: "25th"
   acronym: "CONF 202X"
   year: 202X
@@ -19,6 +18,13 @@ conference:
 markdown: kramdown
 
 remote_theme: "dieghernan/chulapa"
+
+theme: chulapa-jekyll
+
+repository: false
+
+github:
+  is_project_page: false
 
 navbar:
   style: dual
@@ -87,7 +93,6 @@ chulapa-skin:
 
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-relative-links
 
