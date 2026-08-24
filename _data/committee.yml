@@ -51,9 +51,3 @@
   photo: ""
   bio: "Bio to be added."
   role: "Publicity Team"
-
-- name: "Daniele Fadda"
-  affiliation: "CNR, ISTI"
-  photo: "assets/images/committee/fadda.jpg"
-  bio: ""
-  role: "Website Chair"

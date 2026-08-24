@@ -545,12 +545,13 @@ $shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .team-modal-photo {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 0;
   flex-shrink: 0;
   margin-right: 0.5rem;
+  max-width: 100%;
 }
 
 // ====== CONTACT SECTION STYLES ======
