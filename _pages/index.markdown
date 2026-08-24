@@ -3,7 +3,7 @@ layout: default-full
 title: "IDA 2027"
 permalink: /
 header_title: "IDA 2027"
-subtitle: "25th International Symposium on Intelligent Data Analysis <br><span class=\"small\">April 22-24, 2027</span> | Pisa, Italy"
+subtitle: "25<sup>th</sup> International Symposium on Intelligent Data Analysis <br><span class=\"small\">Month d1-d2, 202x</span> | City, Country"
 header_type: hero
 header_white: true
 header_img: /assets/images/ida2027-hero.jpg
@@ -19,18 +19,18 @@ project_links:
 <div class="container-lg mt-4">
     <div class="row mb-5">
         <div class="col-6">
-            <h3>25th International Symposium on Intelligent Data Analysis</h3>
+            <h3>{{ site.conference.edition }} International Conference on {{ site.conference.topic }}</h3>
             <p>
-                Advancing <em>Intelligent Data Analysis</em> requires novel, potentially game-changing ideas. 
-                IDA's mission is to promote ideas over performance: a solid motivation can be as convincing as 
-                exhaustive empirical evaluation. Therefore IDA accepts all inspiring papers for both presentation 
-                and publication. In order to create an open atmosphere that encourages discussion, the IDA 
-                symposium is intentionally small-scale and single-track.
+                Advancing <em>{{ site.conference.topic }}</em> requires novel, potentially game-changing ideas. 
+                {{ site.conference.acronym }}'s mission is to promote innovation and scientific excellence: 
+                a solid motivation can be as convincing as exhaustive empirical evaluation. 
+                Therefore, {{ site.conference.acronym }} accepts inspiring papers for both presentation 
+                and publication. In order to create an open atmosphere that encourages discussion, 
+                the symposium is structured to support focused, high-quality interactions.
             </p>
             <p>
-                The 25th International Symposium on Intelligent Data Analysis will bring together researchers 
-                and practitioners from academia, industry, and government to present and discuss the latest 
-                research in intelligent data analysis.
+                The {{ site.conference.edition }} International Conference on {{ site.conference.topic }} 
+                will bring together researchers, experts, and practitioners from academia, industry, and government to present and discuss the latest breakthroughs in the field.
             </p>
         </div>
         <div class="col-6">

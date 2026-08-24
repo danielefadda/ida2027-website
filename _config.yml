@@ -7,6 +7,15 @@ description: >-
   IDA 2027: 25th International Symposium on Intelligent Data Analysis.
   Advancing Intelligent Data Analysis with novel, potentially game-changing ideas.
 
+conference:
+  name: "International Symposium on Intelligent Data Analysis"
+  edition: "25th"
+  acronym: "IDA 2027"
+  year: 2027
+  location: "City, Country"
+  dates: "Month n-m, 202x"
+  topic: "Intelligent Data Analysis"
+
 markdown: kramdown
 
 remote_theme: "dieghernan/chulapa"
